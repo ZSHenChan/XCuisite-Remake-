@@ -1,0 +1,23 @@
+{
+  "name": "xcuisite",
+  "version": "1.0.0",
+  "description": "",
+  "default": "index.html",
+  "homepage": ".",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html  --dist-dir ./dist"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.11.0",
+    "bootstrap": "^5.3.2",
+    "parcel": "^2.11.0"
+  },
+  "dependencies": {
+    "bootstrap-icons": "^1.11.3",
+    "core-js": "^3.35.1",
+    "regenerator": "^0.14.12"
+  }
+}
