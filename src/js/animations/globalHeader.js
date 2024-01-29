@@ -6,6 +6,7 @@ class GlobalHeader {
 
   _cartIcon = document.getElementById('cart-icon');
   _cartQty = document.getElementById('cart-qty');
+  _emptyCartBtn = document.querySelector('.empty-cart-btn');
 
   _data;
 
@@ -19,14 +20,16 @@ class GlobalHeader {
     this._globalCurtain.classList.remove('curtain-flyout');
   };
 
-  addHandlerCurtain = function (handler) {
-    this._cartIcon.addEventListener('click', function () {
+  addHandlerCurtain(handlerFlyout, handlerFlyin) {
+    this._cartIcon.addEventListener('click', handlerFlyout);
+    this._globalCurtainBottom.addEventListener('mouseover', handlerFlyin);
+  }
+
+  addHandlerEmptyCart = function (handler) {
+    this._emptyCartBtn.addEventListener('click', function (e) {
+      e.preventDefault();
       handler();
     });
-    this._globalCurtainBottom.addEventListener(
-      'mouseover',
-      this.curtainFlyin.bind(this)
-    );
   };
 }
 

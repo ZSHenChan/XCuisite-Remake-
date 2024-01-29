@@ -13,11 +13,11 @@ class ControllerIndex extends Controller {
   constructor() {
     super();
     this._initIndex();
+    this._init();
   }
 
   _initIndex() {
     videoScrolling.addHandlerVideoScrolling();
-    this._init();
     gridAnimations.addHandlerGridAnimation();
 
     carousel.addHandlerCarousel(this._controlCarouselSlides);

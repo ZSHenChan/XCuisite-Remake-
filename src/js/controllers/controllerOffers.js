@@ -4,21 +4,30 @@ import 'bootstrap';
 import 'regenerator-runtime/runtime';
 
 import * as model from '../model.js';
-import cart from '../components/cart.js';
-// import addToCart from '../components/addToCart.js';
-
-import animations from '../animations/defaultAnimations.js';
-import globalHeader from '../animations/globalHeader.js';
+import offers from '../components/offers.js';
 
 class ControllerOffers extends Controller {
   constructor() {
     super();
-    addToCart.render();
+    offers.render(model.products);
+    this._init();
+    this.addHandlers();
   }
 
-  _initOffers() {
-    animations.observeAllAnimatedComponents();
-    this._init();
+  controlModal = function (targetID) {
+    model.state.modalProduct = model.products[targetID];
+    offers.modalWindow(model.state.modalProduct);
+  };
+
+  controlAddToCart = function () {
+    const qty = offers.getQtyFromModal();
+    offers.closeModal();
+    model.addToCart(+qty);
+  };
+
+  addHandlers() {
+    offers.addHandlerCards(this.controlModal);
+    offers.addHandlerAddToCart(this.controlAddToCart);
   }
 }
 

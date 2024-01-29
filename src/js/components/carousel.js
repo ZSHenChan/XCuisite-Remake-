@@ -117,11 +117,9 @@ class Carousel extends Component {
 
   addHandlerDots(handler) {
     this._dotsContainer.addEventListener('click', function (e) {
-      console.log('hi');
       e.preventDefault();
       if (e.target.classList.contains('dots-dot')) {
         const slideNum = e.target.dataset.slide;
-        console.log(slideNum);
         handler(slideNum);
       }
     });

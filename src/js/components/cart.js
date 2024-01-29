@@ -6,26 +6,22 @@ class Cart extends Component {
   _cartIcon = document.getElementById('cart-icon');
   _cartQty = document.getElementById('cart-qty');
 
-  render(data) {
-    // if (!data) return;
-    // if (Array.isArray(data) && data.length == 0) return this.renderMessage();
-    // this._data = data;
-    // const markup = this._generateMarkups();
-    // this._clear();
-    // this._parentEl.insertAdjacentHTML('afterbegin', markup);
-    console.log(data);
+  _data;
+
+  _generateMarkups() {
+    if (this._data.length === 0)
+      return '<span class="h4 mt-3">Your cart is empty</span>';
+    return this._data
+      .map(data => this._generateMarkup(data.product, data.qty))
+      .join('');
   }
 
-  _generateMarkups = function () {
-    console.log(this._data);
-  };
-
-  _generateMarkup = function (product, qty) {
+  _generateMarkup(product, qty) {
     return `<li class="item row">
           <span class="item-img col-1">
             <img
               src=""
-              alt="${product.imgAlt}"
+              alt="${product.productName}"
               class="rounded top-5"
               width="64"
               height="64"
@@ -35,7 +31,7 @@ class Cart extends Component {
             >${product.productName}<br><span class="item-qty"> x${qty}</span></span
           >
         </li>`;
-  };
+  }
 }
 
 export default new Cart();

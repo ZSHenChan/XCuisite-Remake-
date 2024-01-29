@@ -1,18 +1,18 @@
 import * as model from '../model.js';
 import Component from './component.js';
 
-class AddToCart extends Component {
-  _data = model.products;
+class Offers extends Component {
+  _data;
 
   _parentEl = document.querySelector('.content-wrapper .row');
 
-  _generateMarkups = function () {
+  _generateMarkups() {
     return this._data.map(product => this._generateMarkup(product)).join('');
-  };
+  }
 
-  _generateMarkup = function (product) {
+  _generateMarkup(product) {
     return `<div class="col-section reveal">
-      <div class="card-wrapper" data-id="">
+      <div class="card-wrapper" data-id="${product.id}">
         <div class="card text-center rounded-5  face front">
           <img
             src="../${product.img}"
@@ -75,13 +75,13 @@ class AddToCart extends Component {
         </div>
       </div>
     </div>`;
-  };
+  }
 
   // cardBtns = document.querySelectorAll('.card-wrapper .btn');
   // cardWrapper = document.querySelectorAll('.card-wrapper');
   // inCartWrapper = document.querySelector('.in-cart-wrapper');
   _modal = document.querySelector('.modal');
-  // modalBtn = modal.querySelector('.modal-btn');
+  _modalBtn = this._modal.querySelector('.modal-btn');
   // modalItemName = modal.querySelector('.modal-item-name');
   // modalImg = modal.querySelector('.card-img-top');
 
@@ -110,17 +110,24 @@ class AddToCart extends Component {
   //   const quantity = qty.value;
   //   addToCart(+quantity);
   // };
-
-  modalWindow = function () {
-    this._modal.classList.remove('hidden');
-    this._modal
-      .querySelector('.card-img-top')
-      .setAttribute('src', modalProduct.img);
-    this._modal.querySelector('.modal-item-name').innerHTML =
-      modalProduct.productName;
+  getQtyFromModal = function () {
+    const qty = this._modal.querySelector('.modal-item-qty');
+    const quantity = qty.value;
+    return quantity;
   };
 
-  initAddToCart = function () {
+  closeModal = function () {
+    this._modal.classList.add('hidden');
+  };
+
+  modalWindow = function (data) {
+    this.data = data;
+    this._modal.classList.remove('hidden');
+    this._modal.querySelector('.card-img-top').setAttribute('src', data.img);
+    this._modal.querySelector('.modal-item-name').innerHTML = data.productName;
+  };
+
+  addHandlerCards = function (handler) {
     this._parentEl.addEventListener('click', function (e) {
       const target = e.target;
       if (
@@ -130,13 +137,16 @@ class AddToCart extends Component {
         target.closest('.card-wrapper').classList.toggle('is-flipped');
       } else if (target.classList.contains('btn')) {
         const targetID = target.closest('.card-wrapper').dataset.id;
-        model.state.modal = model.products[targetID];
-        modalWindow();
+        handler(targetID);
       } else {
         console.log('nothing');
       }
     });
   };
+
+  addHandlerAddToCart = function (handler) {
+    this._modalBtn.addEventListener('click', handler);
+  };
 }
 
-export default new AddToCart();
+export default new Offers();

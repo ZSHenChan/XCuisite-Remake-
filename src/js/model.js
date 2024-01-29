@@ -1,5 +1,6 @@
 const product0 = {
   productName: 'Strawberry&nbsp;Indulgence',
+  id: 0,
   description: 'Strawberry Beast',
   img: 'images/products/strawberry-indulgence.jpg',
   thumbnail: 'images/products/strawberry-indulgence_tn.jpg',
@@ -8,6 +9,7 @@ const product0 = {
 };
 const product1 = {
   productName: 'Hazelnut',
+  id: 1,
   description: 'Nuts&nbsp;Kraze',
   img: '/images/products/hazelnut.jpg',
   thumbnail: '/images/products/hazelnut_tn.jpg',
@@ -16,6 +18,7 @@ const product1 = {
 };
 const product2 = {
   productName: 'Kobby&nbsp;Mendez',
+  id: 2,
   description: 'For&nbsp;Him',
   img: 'images/products/kobby-mendez.jpg',
   thumbnail: 'images/products/kobby-mendez_tn.jpg',
@@ -24,6 +27,7 @@ const product2 = {
 };
 const product3 = {
   productName: 'Lore&nbsp;Schodts',
+  id: 3,
   description: 'Assorted&nbsp;Caramel',
   img: 'images/products/caramel.jpg',
   thumbnail: 'images/products/caramel_tn.jpg',
@@ -32,6 +36,7 @@ const product3 = {
 };
 const product4 = {
   productName: 'Matcha&nbsp;Deluxe',
+  id: 4,
   description: 'Matcha&nbsp;Icing',
   img: 'images/products/matcha.jpg',
   thumbnail: 'images/products/matcha_tn.jpg',
@@ -40,6 +45,7 @@ const product4 = {
 };
 const product5 = {
   productName: 'Dark&nbsp;Forest',
+  id: 5,
   description: 'Dark&nbsp;Chocolate',
   img: 'images/products/dark-chocolate.jpg',
   thumbnail: 'images/products/dark-chocolate_tn.jpg',
@@ -48,6 +54,7 @@ const product5 = {
 };
 const product6 = {
   productName: 'Towfuqi',
+  id: 6,
   description: 'Colourful&nbsp;Carade',
   img: 'images/products/towfiqu.jpg',
   thumbnail: 'images/products/towfiqu_tn.jpg',
@@ -56,6 +63,7 @@ const product6 = {
 };
 const product7 = {
   productName: 'Classic&nbsp;Schodts',
+  id: 7,
   description: 'Classic&nbsp;.Not Basic',
   img: 'images/products/classic-choc.jpg',
   thumbnail: '/images/products/classic-choc_tn.jpg',
@@ -64,6 +72,7 @@ const product7 = {
 };
 const product8 = {
   productName: 'Black Magic',
+  id: 8,
   description: 'Avada Kedavra',
   img: '/images/products/black-magic.jpg',
   thumbnail: '/images/products/black-magic_tn.jpg',
@@ -72,6 +81,7 @@ const product8 = {
 };
 const product9 = {
   productName: 'Oreo&nbsp;Bonanza',
+  id: 9,
   description: 'Kids&nbsp;Favourite',
   img: '/images/products/oreo.jpg',
   thumbnail: '/images/products/oreo_tn.jpg',
@@ -80,6 +90,7 @@ const product9 = {
 };
 const product10 = {
   productName: 'Banana Indulgence',
+  id: 10,
   description: 'Natural&nbsp;Sweetness',
   img: '/images/products/banana.jpg',
   thumbnail: '/images/products/banana_tn.jpg',
@@ -88,6 +99,7 @@ const product10 = {
 };
 const product11 = {
   productName: 'Scary Chocolate',
+  id: 11,
   description: 'Halloween&nbsp;Special',
   img: '/images/products/halloween-choc.jpg',
   thumbnail: '/images/products/halloween-choc_tn.jpg',
@@ -96,6 +108,7 @@ const product11 = {
 };
 const product12 = {
   productName: 'Raspberry',
+  id: 12,
   description: 'Stay&nbsp;Pretty',
   img: '/images/products/raspberry.jpg',
   thumbnail: '/images/products/raspberry_tn.jpg',
@@ -121,12 +134,31 @@ export const products = [
 
 export const state = {
   curSlide: 0,
-  modal: null,
+  modalProduct: null,
   cart: {
     totalQty: 0,
-    items: [
-      { product: product0, qty: 1 },
-      { product: product1, qty: 2 },
-    ],
+    items: [],
   },
 };
+const persistCart = function () {
+  localStorage.setItem('cart', JSON.stringify(state.cart));
+};
+
+export const addToCart = function (qty) {
+  state.cart.totalQty += +qty;
+  state.cart.items.push({ product: state.modalProduct, qty });
+  persistCart();
+};
+
+export const emptyCart = function () {
+  localStorage.clear();
+  state.cart.totalQty = 0;
+  state.cart.items = [];
+};
+
+const init = function () {
+  const localStorageItems = localStorage.getItem('cart');
+  if (localStorageItems) state.cart = JSON.parse(localStorageItems);
+};
+
+init();
