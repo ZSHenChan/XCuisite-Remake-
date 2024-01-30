@@ -8,8 +8,6 @@ class GlobalHeader {
   _cartQty = document.getElementById('cart-qty');
   _emptyCartBtn = document.querySelector('.empty-cart-btn');
 
-  _data;
-
   curtainFlyout = function () {
     this._globalCurtain.classList.add('curtain-flyout');
     this._globalCurtainBottom.classList.add('curtain-bottom-flyout');

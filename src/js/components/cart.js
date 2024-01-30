@@ -1,4 +1,5 @@
 import Component from './component';
+import imageTn from '../../images/products/banana_tn.jpg';
 
 class Cart extends Component {
   _parentEl = document.querySelector('.in-cart-wrapper');
@@ -7,10 +8,9 @@ class Cart extends Component {
   _cartQty = document.getElementById('cart-qty');
 
   _data;
+  _msg = '<span class="h4 mt-3">Your cart is empty</span>';
 
   _generateMarkups() {
-    if (this._data.length === 0)
-      return '<span class="h4 mt-3">Your cart is empty</span>';
     return this._data
       .map(data => this._generateMarkup(data.product, data.qty))
       .join('');
@@ -20,7 +20,7 @@ class Cart extends Component {
     return `<li class="item row">
           <span class="item-img col-1">
             <img
-              src=""
+              src="${imageTn}"
               alt="${product.productName}"
               class="rounded top-5"
               width="64"

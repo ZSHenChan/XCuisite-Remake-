@@ -25,9 +25,14 @@ class ControllerOffers extends Controller {
     model.addToCart(+qty);
   };
 
+  controlCloseModal = function () {
+    offers.closeModal();
+  };
+
   addHandlers() {
     offers.addHandlerCards(this.controlModal);
     offers.addHandlerAddToCart(this.controlAddToCart);
+    offers.addHandlerCloseModal(this.controlCloseModal);
   }
 }
 

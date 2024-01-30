@@ -14,10 +14,12 @@ class ControllerIndex extends Controller {
     super();
     this._initIndex();
     this._init();
+    videoScrolling.addHandlerIntoCtaBtn();
   }
 
   _initIndex() {
     videoScrolling.addHandlerVideoScrolling();
+
     gridAnimations.addHandlerGridAnimation();
 
     carousel.addHandlerCarousel(this._controlCarouselSlides);

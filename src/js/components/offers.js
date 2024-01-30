@@ -1,10 +1,16 @@
 import * as model from '../model.js';
 import Component from './component.js';
+import image from '../../images/products/banana.jpg';
+
+import * as model from '../model.js';
 
 class Offers extends Component {
   _data;
-
   _parentEl = document.querySelector('.content-wrapper .row');
+
+  _modal = document.querySelector('.modal');
+  _modalBtn = this._modal.querySelector('.modal-btn');
+  _overlay = document.querySelector('.modal-overlay');
 
   _generateMarkups() {
     return this._data.map(product => this._generateMarkup(product)).join('');
@@ -15,7 +21,7 @@ class Offers extends Component {
       <div class="card-wrapper" data-id="${product.id}">
         <div class="card text-center rounded-5  face front">
           <img
-            src="../${product.img}"
+            src="${image}"
             alt="${product.imgAlt}"
             class="card-image-top rounded-top-5"
           />
@@ -46,7 +52,7 @@ class Offers extends Component {
         </div>
         <div class="card text-center rounded-5 face back">
           <img
-            src="${product.img}"
+          src="${image}"
             alt="${product.imgAlt}"
             class="card-image-top rounded-top-5"
             style="transform: scaleX(-1)"
@@ -77,42 +83,10 @@ class Offers extends Component {
     </div>`;
   }
 
-  // cardBtns = document.querySelectorAll('.card-wrapper .btn');
-  // cardWrapper = document.querySelectorAll('.card-wrapper');
-  // inCartWrapper = document.querySelector('.in-cart-wrapper');
-  _modal = document.querySelector('.modal');
-  _modalBtn = this._modal.querySelector('.modal-btn');
-  // modalItemName = modal.querySelector('.modal-item-name');
-  // modalImg = modal.querySelector('.card-img-top');
-
-  // modalProduct;
-  // targetData;
-
-  // modalBtn.addEventListener("click", function () {
-  //   getQtyFromModal();
-  // });
-
-  // const addToCart = function (qty) {
-  //   const prd = window.localStorage.getItem(targetData);
-  //   if (qty <= 0) return;
-  //   if (prd == null) {
-  //     window.localStorage.setItem(targetData, qty);
-  //   } else {
-  //     const oldQty = +window.localStorage.getItem(targetData);
-  //     window.localStorage.setItem(targetData, qty + oldQty);
-  //   }
-  //   displayCart();
-  // };
-
-  // const getQtyFromModal = function () {
-  //   const qty = modal.querySelector(".modal-item-qty");
-  //   modal.classList.add("hidden");
-  //   const quantity = qty.value;
-  //   addToCart(+quantity);
-  // };
   getQtyFromModal = function () {
     const qty = this._modal.querySelector('.modal-item-qty');
     const quantity = qty.value;
+    qty.value = '1';
     return quantity;
   };
 
@@ -123,7 +97,7 @@ class Offers extends Component {
   modalWindow = function (data) {
     this.data = data;
     this._modal.classList.remove('hidden');
-    this._modal.querySelector('.card-img-top').setAttribute('src', data.img);
+    // this._modal.querySelector('.card-img-top').setAttribute('src', data.img);
     this._modal.querySelector('.modal-item-name').innerHTML = data.productName;
   };
 
@@ -138,14 +112,16 @@ class Offers extends Component {
       } else if (target.classList.contains('btn')) {
         const targetID = target.closest('.card-wrapper').dataset.id;
         handler(targetID);
-      } else {
-        console.log('nothing');
       }
     });
   };
 
   addHandlerAddToCart = function (handler) {
     this._modalBtn.addEventListener('click', handler);
+  };
+
+  addHandlerCloseModal = function (handler) {
+    this._overlay.addEventListener('click', handler);
   };
 }
 

@@ -16,13 +16,6 @@
     }
     display: block;
 
-    // h1 {
-    //   transition-delay: 0.5s;
-    //   -webkit-transition-delay: 0.5s;
-    //   -o-transition-delay: 0.5s;
-    //   -moz-transition-delay: 0.5s;
-    // }
-
     .col-section {
       img {
         width: 100%;
@@ -36,8 +29,7 @@
         transition: 0.6s ease-in-out;
       }
       .card-title {
-        // font-weight: bold;
-        font-size: 1.7rem;
+        font-size: 1.5rem;
       }
       .card-text {
         font-size: 1.13rem;
@@ -93,6 +85,13 @@
   }
 
   .modal {
+    .modal-overlay {
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 100dvh;
+      width: 100dvw;
+    }
     z-index: 5;
     position: fixed;
     top: 0;

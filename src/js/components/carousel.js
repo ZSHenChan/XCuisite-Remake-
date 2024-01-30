@@ -1,5 +1,6 @@
 import * as model from '../model.js';
 import Component from './component.js';
+import image from '../../images/products/banana.jpg';
 
 class Carousel extends Component {
   _parentEl = document.querySelector('.card-container');
@@ -33,7 +34,7 @@ class Carousel extends Component {
               >
               
                 <img
-                  src="src/${product.img}"
+                  src="${image}"
                   alt="${product.imgAlt}"
                   class="card-image-top rounded-top-5"
                 />

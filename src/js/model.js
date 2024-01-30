@@ -2,8 +2,8 @@ const product0 = {
   productName: 'Strawberry&nbsp;Indulgence',
   id: 0,
   description: 'Strawberry Beast',
-  img: 'images/products/strawberry-indulgence.jpg',
-  thumbnail: 'images/products/strawberry-indulgence_tn.jpg',
+  img: 'strawberry-indulgence.jpg',
+  thumbnail: '/images/products/strawberry-indulgence_tn.jpg',
   imgAlt: 'Strawberry Indulgence',
   ingredients: 'strawberry',
 };
@@ -11,7 +11,7 @@ const product1 = {
   productName: 'Hazelnut',
   id: 1,
   description: 'Nuts&nbsp;Kraze',
-  img: '/images/products/hazelnut.jpg',
+  img: 'hazelnut.jpg',
   thumbnail: '/images/products/hazelnut_tn.jpg',
   imgAlt: 'Hazelnut Doughnut',
   ingredients: 'sugar',
@@ -20,8 +20,8 @@ const product2 = {
   productName: 'Kobby&nbsp;Mendez',
   id: 2,
   description: 'For&nbsp;Him',
-  img: 'images/products/kobby-mendez.jpg',
-  thumbnail: 'images/products/kobby-mendez_tn.jpg',
+  img: 'products/kobby-mendez.jpg',
+  thumbnail: 'images/kobby-mendez_tn.jpg',
   imgAlt: 'Kobby Mendez Doughnut',
   ingredients: 'cookie',
 };
@@ -146,7 +146,14 @@ const persistCart = function () {
 
 export const addToCart = function (qty) {
   state.cart.totalQty += +qty;
-  state.cart.items.push({ product: state.modalProduct, qty });
+  const targetID = state.cart.items.findIndex(
+    item => item.product.id === state.modalProduct.id
+  );
+  if (targetID >= 0) {
+    state.cart.items[targetID].qty += +qty;
+  } else {
+    state.cart.items.push({ product: state.modalProduct, qty });
+  }
   persistCart();
 };
 
