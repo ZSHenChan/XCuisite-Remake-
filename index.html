@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Craving for something sweet? XCuisite is your best choice!"
+    />
+    <title>XCuisite - main</title>
+
+    <!-- imports -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="/src/sass/main.scss" rel="stylesheet" />
+
+    <link rel="icon" href="./src/images/logos/xcuisite-logo-64-bg.png" />
+    <link
+      rel="apple-touch-icon"
+      href="./src/images/logos/xcuisite-logo-192-bg.png"
+    />
+
+    <script
+      type="module"
+      defer
+      src="./src/js/controllers/controllerIndex.js"
+    ></script>
+  </head>
+  <body>
+    <header class="global-header">
+      <nav
+        class="navbar navbar-dark sticky-top navbar-expand-md px-4 bg-primary"
+      >
+        <a href="#" class="navbar-menuback">
+          <img
+            src="./src/images/logos/xcuisite-logo-192.png"
+            alt="xcuisite-logo"
+            width="45"
+            height="45"
+          />
+        </a>
+
+        <div class="navbar-nav">
+          <span id="cart-icon" class="cart-icon"
+            ><i class="bi bi-gift nav-link"></i><span id="cart-qty"></span
+          ></span>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#main-nav"
+            aria-controls="main-nav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse navbar-nav-scroll" id="main-nav">
+          <ul class="navbar-nav">
+            <li class="navbar-item">
+              <a href="#" class="navbar-brand" aria-label="main page">
+                <img
+                  src="./src/images/logos/xcuisite-logo-192.png"
+                  alt="xcuisite-logo"
+                  width="45"
+                  height="45"
+                />
+              </a>
+            </li>
+            <li class="navbar-item">
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#main-nav"
+                aria-controls="main-nav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+                style="position: absolute; right: 24px; top: 8px"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </li>
+            <li class="navbar-item">
+              <a href="/html/about.html" class="nav-link">About</a>
+            </li>
+            <li class="navbar-item">
+              <a href="/html/offers.html" class="nav-link">Offers</a>
+            </li>
+            <li class="navbar-item">
+              <a href="html/stores.html" class="nav-link">Stores</a>
+            </li>
+            <li class="navbar-item">
+              <a href="html/contactUs.html" class="nav-link">Contact&nbsp;Us</a>
+            </li>
+            <li class="navbar-item">
+              <a href="html/joinUs.html" class="nav-link">Join&nbsp;Us</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="global-curtain" id="cart-curtain">
+        <div class="global-curtain-content">
+          <span
+            class="global-curtain-content-wrapper d-flex justify-content-between align-items-center"
+            ><h3 class="cart-header">Your Items</h3>
+            <button
+              class="btn btn-secondary text-primary fw-bolder empty-cart-btn"
+            >
+              Empty Cart
+            </button></span
+          >
+          <div class="in-cart-wrapper">
+            <span class="h4 mt-3 ms-4">Your cart is empty</span>
+          </div>
+        </div>
+      </div>
+      <div class="global-curtain-bottom" id="global-curtain-bottom"></div>
+    </header>
+    <main class="rounded-3 text-center p-0" id="main-body">
+      <section class="intro section-hero">
+        <h1 class="hero-caption" role="banner">Strawberry Flamingo</h1>
+
+        <div class="video">
+          <video
+            id="video-desktop"
+            src="./src/videos/intro-video-desktop.mp4"
+            class="d-none d-md-block video-desktop"
+            type="video/mp4"
+            preload="auto"
+            muted
+            playsinline
+            autoplay
+          ></video>
+          <video
+            id="video-mobile"
+            class="d-md-none video-mobile"
+            src="./src/videos/intro-video-mobile-crop.mp4"
+            type="video/mp4"
+            preload="auto"
+            muted
+            playsinline
+            autoplay
+          ></video>
+        </div>
+      </section>
+
+      <section class="section-post-intro">
+        <a href="html/offers.html" class="intro-cta-btn-container"
+          ><button class="intro-cta-btn expand-btn delay-animation">
+            Get Now
+          </button></a
+        >
+        <div class="post-intro-section-container">
+          <div class="post-intro-section">
+            <div class="row row-cols-1 row-cols-md-2 align-items-center">
+              <div class="col d-none d-md-block reveal post-intro-sub-header">
+                <h2>Classic</h2>
+                <p>Our beloved ones</p>
+              </div>
+              <div class="col post-intro-section-img">
+                <picture
+                  ><source srcset="./src/images/index/post-intro-1.webp" />
+                  <img
+                    class="img-fluid"
+                    src="./src/images/index/post-intro-1.jpg"
+                    alt="our classic doughnut"
+                /></picture>
+              </div>
+              <div class="col d-md-none reveal post-intro-sub-header">
+                <h2>Classic</h2>
+                <p>Our beloved ones</p>
+              </div>
+            </div>
+          </div>
+          <div class="post-intro-section">
+            <div class="row row-cols-1 row-cols-md-2 align-items-center">
+              <div class="col post-intro-section-img">
+                <picture
+                  ><source srcset="./src/images/index/post-intro-2.webp" />
+                  <img
+                    class="img-fluid"
+                    src="./src/images/index/post-intro-2.jpg"
+                    alt="fresh strawberries"
+                /></picture>
+              </div>
+              <div class="col reveal post-intro-sub-header">
+                <h2>More Fresh Strawberries</h2>
+                <p>More Tasty</p>
+              </div>
+            </div>
+          </div>
+          <div class="post-intro-section">
+            <div class="row row-cols-1 row-cols-md-2 align-items-center">
+              <div class="col d-none d-md-block reveal post-intro-sub-header">
+                <h2>More Flavours</h2>
+                <p>More Experiences</p>
+              </div>
+              <div class="col post-intro-section-img">
+                <picture
+                  ><source srcset="./src/images/index/post-intro-3.webp" />
+                  <img
+                    class="img-fluid"
+                    src="./src/images/index/post-intro-3.jpg"
+                    alt="image of rows of doughnuts"
+                /></picture>
+              </div>
+              <div class="col d-md-none reveal post-intro-sub-header">
+                <h2>More Flavours</h2>
+                <p>More Experiences</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-grid">
+        <div class="section-grid-wrapper">
+          <h2 class="reveal header-2 section-grid-header">
+            New Flavour. New Happiness
+          </h2>
+          <p class="reveal section-grid-header">random</p>
+          <section class="grid-gallery-container">
+            <div class="row row-cols-1 row-cols-xl-2">
+              <div class="grid-gallery col grid-gallery-1">
+                <div class="grid-item grid-item-1">
+                  <picture>
+                    <source srcset="./src/images/index/grid-gallery-1.webp" />
+                    <img
+                      loading="lazy"
+                      src="./src/images/index/grid-gallery-1.jpg"
+                      alt="lots of pinky donuts"
+                    />
+                  </picture>
+                </div>
+                <div class="grid-item grid-item-2">
+                  <picture>
+                    <source srcset="./src/images/index/grid-gallery-2.webp" />
+                    <img
+                      loading="lazy"
+                      src="./src/images/index/grid-gallery-2.jpg"
+                      alt="donuts with icing"
+                    />
+                  </picture>
+                </div>
+                <div class="grid-item grid-item-3">
+                  <picture>
+                    <source srcset="./src/images/index/grid-gallery-3.webp" />
+                    <img
+                      loading="lazy"
+                      src="./src/images/index/grid-gallery-3.jpeg"
+                      alt="image of different donuts display"
+                    />
+                  </picture>
+                </div>
+                <div class="grid-item grid-item-4">
+                  <picture>
+                    <source srcset="./src/images/index/grid-gallery-4.webp" />
+                    <img
+                      loading="lazy"
+                      src="./src/images/index/grid-gallery-4.jpg"
+                      alt="plateful of donuts with creams and fruits on it"
+                    />
+                  </picture>
+                </div>
+              </div>
+              <div class="grid-gallery col grid-gallery-2">
+                <div class="grid-item grid-item-5">
+                  <picture>
+                    <source srcset="./src/images/index/grid-gallery-5.webp" />
+                    <img
+                      loading="lazy"
+                      src="./src/images/index/grid-gallery-5.jpg"
+                      alt="bluish donut holding by someone"
+                    />
+                  </picture>
+                </div>
+                <div class="grid-item grid-item-6">
+                  <picture>
+                    <source srcset="./src/images/index/grid-gallery-6.webp" />
+                    <img
+                      loading="lazy"
+                      src="./src/images/index/grid-gallery-6.jpg"
+                      alt="more donuts just came out from the oven"
+                    />
+                  </picture>
+                </div>
+                <div class="grid-item grid-item-7">
+                  <picture>
+                    <source srcset="./src/images/index/grid-gallery-7.webp" />
+                    <img
+                      loading="lazy"
+                      src="./src/images/index/grid-gallery-7.jpg"
+                      alt="donuts displayed on plate"
+                    />
+                  </picture>
+                </div>
+                <div class="grid-item grid-item-8">
+                  <picture>
+                    <source srcset="./src/images/index/grid-gallery-8.webp" />
+                    <img
+                      loading="lazy"
+                      src="./src/images/index/grid-gallery-8.jpg"
+                      alt="pinky donuts on plate with a gigantic cake"
+                    />
+                  </picture>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section class="section-transparent"></section>
+
+      <section class="section-carousel">
+        <h2 class="header-2 carousel-header reveal">Meet Our Old Friends</h2>
+        <div class="carousel-wrapper">
+          <div class="card-wrapper">
+            <div class="card-container"></div>
+          </div>
+          <div class="dots"></div>
+        </div>
+      </section>
+    </main>
+  </body>
+  <footer class="globalfooter text-secondary bg-primary">
+    <div class="globalfooter-content px-5 pt-5">
+      <nav class="globalfooter-directory row row-cols-1 row-cols-md-3 mb-5">
+        <div class="globalfooter-column col">
+          <div class="globalfooter-column-section">
+            <h3 class="globalfooter-column-section-title">
+              <span class="globalfooter-column-section-title-text">Stores</span>
+              <button
+                id="globalfooterColumnSectionButton-Stores"
+                onclick="triggerFooterColumnSection(this.id)"
+                class="globalfooter-column-section-title-text-button btn btn-primary text-secondary px-0"
+              >
+                <span>Stores</span>
+                <span><i class="bi bi-arrows-angle-expand"></i></span>
+              </button>
+            </h3>
+            <div class="globalfooter-column-section-list-wrapper">
+              <ul class="globalfooter-column-section-list">
+                <li class="globalfooter-column-section-item">
+                  <a href="#">Singapore</a>
+                </li>
+                <li class="globalfooter-column-section-item">
+                  <a href="#">Malaysia</a>
+                </li>
+                <li class="globalfooter-column-section-item">
+                  <a href="#">Indonesia</a>
+                </li>
+                <li class="globalfooter-column-section-item">
+                  <a href="#">Thailand</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="globalfooter-column-section">
+            <h3 class="globalfooter-column-section-title">
+              <span class="globalfooter-column-section-title-text"
+                >About Us</span
+              >
+              <button
+                id="globalfooterColumnSectionButton-About-Us"
+                onclick="triggerFooterColumnSection(this.id)"
+                class="globalfooter-column-section-title-text-button btn btn-primary text-secondary px-0"
+              >
+                <span>About Us</span>
+                <span><i class="bi bi-arrows-angle-expand"></i></span>
+              </button>
+            </h3>
+            <div class="globalfooter-column-section-list-wrapper">
+              <ul class="globalfooter-column-section-list">
+                <li class="globalfooter-column-section-item">
+                  <a href="html/investors.html">Investors</a>
+                </li>
+                <li class="globalfooter-column-section-item">
+                  <a href="index.html">Events</a>
+                </li>
+                <li class="globalfooter-column-section-item">
+                  <a href="html/about.html">History</a>
+                </li>
+                <li class="globalfooter-column-section-item">
+                  <a href="html/contactUs.html">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="globalfooter-column col">
+          <div class="globalfooter-column-section">
+            <h3 class="globalfooter-column-section-title">
+              <span class="globalfooter-column-section-title-text"
+                >Account</span
+              >
+              <button
+                id="globalfooterColumnSectionButton-Shops"
+                onclick="triggerFooterColumnSection(this.id)"
+                class="globalfooter-column-section-title-text-button btn btn-primary text-secondary px-0"
+              >
+                <span>Account</span>
+                <span><i class="bi bi-arrows-angle-expand"></i></span>
+              </button>
+            </h3>
+            <div class="globalfooter-column-section-list-wrapper">
+              <ul class="globalfooter-column-section-list">
+                <li class="globalfooter-column-section-item">
+                  <a href="#">Create Account</a>
+                </li>
+                <li class="globalfooter-column-section-item">
+                  <a href="#">Sign In</a>
+                </li>
+                <li class="globalfooter-column-section-item">
+                  <a href="#">iOS App</a>
+                </li>
+                <li class="globalfooter-column-section-item">
+                  <a href="#">Android App</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="globalfooter-column-section">
+            <h3 class="globalfooter-column-section-title">
+              <span class="globalfooter-column-section-title-text"
+                >Company</span
+              >
+              <button
+                id="globalfooterColumnSectionButton-Shops2"
+                onclick="triggerFooterColumnSection(this.id)"
+                class="globalfooter-column-section-title-text-button btn btn-primary text-secondary px-0"
+              >
+                <span>Company</span>
+                <span><i class="bi bi-arrows-angle-expand"></i></span>
+              </button>
+            </h3>
+            <div class="globalfooter-column-section-list-wrapper">
+              <ul class="globalfooter-column-section-list">
+                <li class="globalfooter-column-section-item">
+                  <a href="#">For Business</a>
+                </li>
+                <li class="globalfooter-column-section-item">
+                  <a href="html/joinUs.html">Join Us</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="globalfooter-column-section">
+            <h3 class="globalfooter-column-section-title">
+              <span class="globalfooter-column-section-title-text"
+                >Resources</span
+              >
+              <button
+                id="globalfooterColumnSectionButton-Shops3"
+                onclick="triggerFooterColumnSection(this.id)"
+                class="globalfooter-column-section-title-text-button btn btn-primary text-secondary px-0"
+              >
+                <span>Resources</span>
+                <span><i class="bi bi-arrows-angle-expand"></i></span>
+              </button>
+            </h3>
+            <div class="globalfooter-column-section-list-wrapper">
+              <ul class="globalfooter-column-section-list">
+                <li class="globalfooter-column-section-item">
+                  <a href="html/offers.html">Offers</a>
+                </li>
+                <li class="globalfooter-column-section-item">
+                  <a href="#">Privacy & Terms</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="globalfooter-column col">
+          <div class="globalfooter-column-section">
+            <h3 class="globalfooter-column-section-title">
+              <span class="globalfooter-column-section-title-text">Shops</span>
+              <button
+                id="globalfooterColumnSectionButton-Shops4"
+                onclick="triggerFooterColumnSection(this.id)"
+                class="globalfooter-column-section-title-text-button btn btn-primary text-secondary px-0"
+              >
+                <span>Shop</span>
+                <span><i class="bi bi-arrows-angle-expand"></i></span>
+              </button>
+            </h3>
+            <div class="globalfooter-column-section-list-wrapper">
+              <ul class="globalfooter-column-section-list">
+                <li class="globalfooter-column-section-item">
+                  <a href="#">BestSeller</a>
+                </li>
+                <li class="globalfooter-column-section-item">
+                  <a href="#">New Arrival</a>
+                </li>
+                <li class="globalfooter-column-section-item">
+                  <a href="#">Ring</a>
+                </li>
+                <li class="globalfooter-column-section-item">
+                  <a href="#">Shell</a>
+                </li>
+                <li class="globalfooter-column-section-item">
+                  <a href="#">Cake</a>
+                </li>
+                <li class="globalfooter-column-section-item">
+                  <a href="#">Classic</a>
+                </li>
+                <li class="globalfooter-column-section-item">
+                  <a href="#">Chocolate</a>
+                </li>
+                <li class="globalfooter-column-section-item">
+                  <a href="#">Strawberry</a>
+                </li>
+                <li class="globalfooter-column-section-item">
+                  <a href="#">Milk</a>
+                </li>
+                <li class="globalfooter-column-section-item">
+                  <a href="#">Glazed</a>
+                </li>
+                <li class="globalfooter-column-section-item">
+                  <a href="#">Powdered</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div
+        class="globalfooter-mini-shop border-secondary border-bottom mb-3 d-flex justify-content-between py-1"
+      >
+        <p class="mt-2">
+          Check out our stores:&nbsp;<span><a href="#">Find a store</a></span>
+          or call 012-345-6789
+        </p>
+        <div class="social-medias fs-4 lh-0">
+          <a href="#" class="p-3" aria-label="facebook-link" role="link"
+            ><i class="bi bi-facebook"></i
+          ></a>
+          <a href="#" class="p-3" aria-label="instagram-link" role="link"
+            ><i class="bi bi-instagram"></i
+          ></a>
+        </div>
+      </div>
+      <div class="copyright pb-5">
+        Copyright &copy <span id="current-year"></span> XCuisite Inc. All Rights
+        Reserved
+      </div>
+    </div>
+  </footer>
+</html>

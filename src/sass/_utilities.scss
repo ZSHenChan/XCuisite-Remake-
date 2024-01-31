@@ -1,0 +1,26 @@
+.header-2 {
+  font-size: 4rem;
+  font-weight: bold;
+
+  ~ p {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 100px;
+  }
+  @media (max-width: $md) {
+    font-size: 3rem;
+
+    ~ p {
+      font-size: 2rem;
+    }
+  }
+}
+
+.default-img {
+  max-width: 100%;
+  border-radius: 1rem;
+}
+
+.default-wrapper {
+  padding: 10rem 3rem;
+}

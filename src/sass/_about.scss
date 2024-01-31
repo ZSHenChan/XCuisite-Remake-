@@ -1,0 +1,68 @@
+.about-banner {
+  background-image: linear-gradient(
+      (to right bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.7))
+    ),
+    url('../images/about/about-banner.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  width: 100dvw;
+  position: relative;
+
+  .about-intro-text {
+    width: 70%;
+    color: $tertiary;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate((-50%, -50%));
+    .about-intro-heading {
+      font-size: 4rem;
+      font-weight: bold;
+      letter-spacing: 0.2rem;
+      margin-bottom: 2rem;
+    }
+    .about-intro-description {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.about-main {
+  .about-main-wrapper {
+    padding: 12rem 7rem;
+    .about-main-block {
+      padding-bottom: 6rem;
+      justify-content: space-between;
+      margin-bottom: 6rem;
+      &:nth-child(odd) {
+        flex-direction: row-reverse;
+      }
+      &:not(:last-child) {
+        border-bottom: 3px $primary double;
+      }
+
+      .about-main-blockImg {
+        margin: auto;
+      }
+      .about-main-blockContent {
+        margin-top: 0.5rem;
+        padding: 0 4rem;
+        .about-main-blockContent-heading {
+          color: $primary;
+          text-transform: uppercase;
+          letter-spacing: 0.3rem;
+          font-size: 2.8rem;
+          margin-bottom: 2rem;
+        }
+        .about-main-blockContent-description {
+          color: $tertiary;
+          font-size: 1.15rem;
+          letter-spacing: 0.04rem;
+          max-width: 55ch;
+          margin: auto;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@import './base.scss';
+
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+@import '../../node_modules/bootstrap-icons/font/bootstrap-icons.css';
+@import './utilities.scss';
+@import './animations.scss';
+
+// DEFAULT COMPONENTS
+@import './navbar.scss';
+@import './footer.scss';
+
+// COMPONENTS
+@import './carousel.scss';
+@import './grid.scss';
+
+// SECTIONS
+@import './intro.scss';
+@import './offers.scss';
+@import './about.scss';

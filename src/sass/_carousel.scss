@@ -1,0 +1,84 @@
+.section-transparent {
+  height: 25rem;
+  background-color: transparent;
+}
+
+.section-carousel {
+  background-color: #ff9cc0;
+  color: #d6336c;
+  min-height: 50rem;
+  padding: 10rem 3rem;
+  @media (max-width: $md) {
+    padding: 10rem 0rem;
+  }
+  .carousel-header {
+    margin-bottom: 5rem;
+  }
+
+  .carousel-wrapper {
+    width: 100%;
+    border-radius: 0.5rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40rem;
+    background-color: #f9eef2;
+    overflow: hidden;
+    .card-container {
+      position: relative;
+      width: 20rem;
+      height: 30rem;
+      margin: auto;
+
+      .carousel-card {
+        opacity: 0.4;
+        width: 20rem;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all 1.2s ease-in-out;
+        cursor: pointer;
+
+        .card-title {
+          font-size: 1.5rem;
+          color: $tertiary;
+          &,
+          .card-text {
+            user-select: none;
+          }
+        }
+      }
+
+      .carousel-card-active {
+        opacity: 1;
+        transform: scale(1.1) !important;
+      }
+    }
+  }
+  .dots {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 1rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  .dots-dot {
+    padding: 0.13rem 0.8rem;
+    transition: all 1s;
+    max-width: 0.2rem;
+    height: 0.2rem;
+    border: none;
+    outline: none;
+    border-radius: 0.5rem;
+    background-color: $background-medium;
+  }
+  .dots-dot-active {
+    opacity: 1;
+    padding: 0.25rem;
+    background-color: #e77da2;
+  }
+}
