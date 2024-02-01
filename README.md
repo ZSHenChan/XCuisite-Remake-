@@ -1,1 +1,3 @@
-# XCuisite-Remake-
+# XCuisite Website (Refactored)
+
+- In progress
