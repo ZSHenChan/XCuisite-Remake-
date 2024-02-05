@@ -12,7 +12,7 @@ class Cart extends Component {
 
   renderCartQty = function (qty) {
     if (qty < 0) return;
-    this._cartQty.textContent = `${qty}`;
+    this._cartQty.textContent = `${qty === 0 ? '' : qty}`;
   };
   _generateMarkups() {
     return this._data
