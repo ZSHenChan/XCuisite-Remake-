@@ -25,3 +25,28 @@ body {
   overflow-x: clip;
   background-color: $primary;
 }
+
+@mixin centralise {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin absCornerTopleft {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@mixin fixedCornerTopleft {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+@mixin absCentralise {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@mixin transitionAllEaseInOut($duration) {
+  transition: all $duration ease-in-out;
+}

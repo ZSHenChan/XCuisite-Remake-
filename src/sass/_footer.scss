@@ -1,8 +1,10 @@
+@import './base';
+
 .globalfooter {
   color: $secondary;
-  font-size: 0.9rem !important;
+  font-size: 0.9rem;
   a {
-    color: $secondary;
+    color: inherit;
     opacity: 70%;
   }
   .globalfooter-column {
@@ -52,7 +54,7 @@
         list-style: none;
         padding-left: 0;
         overflow: hidden;
-        transition: all 0.5s ease-in-out;
+        @include transitionAllEaseInOut(0.5s);
 
         a {
           text-decoration: none;

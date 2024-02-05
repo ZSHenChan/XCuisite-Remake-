@@ -1,3 +1,5 @@
+@import './base';
+
 .offers {
   .offers-header {
     color: $primary;
@@ -26,8 +28,7 @@
       .card-wrapper {
         display: grid;
         transform-style: preserve-3d;
-        transition-timing-function: ease-in-out;
-        transition: 0.6s ease-in-out;
+        @include transitionAllEaseInOut(0.6s);
       }
       .card-title {
         font-size: 1.5rem;
@@ -48,15 +49,15 @@
         transform: rotateY(180deg);
       }
       .back {
-        background-color: $secondary;
+        // background-color: $secondary;
         transform: rotateY(180deg);
         > img {
           opacity: 60%;
         }
       }
-      .front {
-        background-color: $secondary;
-      }
+      // .front {
+      //   background-color:  $secondary;
+      // }
       .card {
         .cta-links {
           display: flex;
@@ -76,12 +77,11 @@
           }
           button {
             font-size: 90%;
-            // z-index: ;
           }
         }
         &:hover {
           box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
-          transition: all 0.4s ease;
+          @include transitionAllEaseInOut(0.4s);
         }
       }
     }
@@ -89,16 +89,12 @@
 
   .modal {
     .modal-overlay {
-      position: absolute;
-      left: 0;
-      right: 0;
+      @include absCornerTopleft;
       height: 100dvh;
       width: 100dvw;
     }
     z-index: 5;
-    position: fixed;
-    top: 0;
-    left: 0;
+    @include fixedCornerTopleft();
     height: 100dvh;
     width: 100dvw;
     background-color: rgba(36, 32, 32, 0.6);
