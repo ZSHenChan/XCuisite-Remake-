@@ -19,10 +19,10 @@ export default class Component {
     );
   }
 
-  renderSpinner = function () {
+  renderSpinner() {
     this._clear();
     this._parentEl.insertAdjacentHTML('afterbegin', spinner);
-  };
+  }
 
   renderError = function () {
     this._clear();

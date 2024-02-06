@@ -1,8 +1,8 @@
 import 'bootstrap';
-import 'regenerator-runtime/runtime';
+// import 'regenerator-runtime/runtime';
 
 import gridAnimations from '../animations/gridAnimations.js';
-import videoScrolling from '../animations/videoScrolling.js';
+import introVideo from '../components/introVideo.js';
 
 import * as model from '../model.js';
 import carousel from '../components/carousel.js';
@@ -14,11 +14,12 @@ class ControllerIndex extends Controller {
     super();
     this._initIndex();
     this._init();
-    videoScrolling.addHandlerIntoCtaBtn();
+    introVideo.addHandlerIntoCtaBtn();
   }
 
   _initIndex() {
-    videoScrolling.addHandlerVideoScrolling();
+    introVideo.addHandlerVideoScrolling();
+    introVideo.addHandlerLoadVideo(this._controlLoadVideo);
 
     gridAnimations.addHandlerGridAnimation();
 
@@ -29,6 +30,10 @@ class ControllerIndex extends Controller {
   _controlCarouselSlides = function (slideNum) {
     model.state.curSlide = slideNum;
     carousel.showSlide(slideNum);
+  };
+
+  _controlLoadVideo = function (isdesktop) {
+    introVideo.loadVideo(isdesktop);
   };
 }
 

@@ -129,22 +129,28 @@
         <h1 class="hero-caption" role="banner">Strawberry Flamingo</h1>
 
         <div class="video">
+          <img
+            src="./src/videos/video-desktop-placeholder.jpg"
+            alt="video placeholder"
+            id="video-placeholder"
+          />
           <video
             id="video-desktop"
             src="./src/videos/intro-video-desktop.mp4"
-            class="d-none d-md-block video-desktop"
             type="video/mp4"
-            preload="auto"
+            class="intro-video"
+            preload="none"
             muted
             playsinline
             autoplay
           ></video>
           <video
             id="video-mobile"
-            class="d-md-none video-mobile"
-            src="./src/videos/intro-video-mobile-crop.mp4"
+            src="./src/videos/intro-video-mobile.mp4"
             type="video/mp4"
-            preload="auto"
+            class="intro-video"
+            preload="none"
+            style="display: none"
             muted
             playsinline
             autoplay
