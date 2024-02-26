@@ -1,19 +1,25 @@
-@import './base.scss';
+@import './base/variables';
+@import './abtracts/mixins';
+@import './base/base.scss';
+@import './base/typography';
 
 @import '../../node_modules/bootstrap/scss/bootstrap.scss';
 @import '../../node_modules/bootstrap-icons/font/bootstrap-icons.css';
-@import './utilities.scss';
-@import './animations.scss';
+@import './base/utilities.scss';
+@import './base/animations.scss';
 
-// DEFAULT COMPONENTS
-@import './navbar.scss';
-@import './footer.scss';
-
-// SECTIONS
-@import './intro.scss';
-@import './offers.scss';
-@import './about.scss';
+// LAYOUTS
+@import './layout/navbar.scss';
 
 // COMPONENTS
-@import './carousel.scss';
-@import './grid.scss';
+@import './components/carousel.scss';
+@import './components/grid.scss';
+@import './components/btn';
+@import './components/card';
+
+// PAGES
+@import './pages/home.scss';
+@import './pages/offers.scss';
+@import './pages/about.scss';
+
+@import './layout/footer.scss';

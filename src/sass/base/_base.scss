@@ -1,0 +1,27 @@
+html {
+  overflow-x: clip;
+  width: 100dvw;
+  font-size: 100%;
+
+  @include respond(desktop) {
+    font-size: 120%;
+  }
+  @include respond(tab-land) {
+    font-size: 80%;
+  }
+  @include respond(tab-port) {
+    font-size: 70%;
+  }
+  @include respond(phone) {
+    font-size: 60%;
+  }
+}
+
+body {
+  font-family: $font-display;
+  line-height: 1.6;
+
+  width: 100%;
+  overflow-x: clip;
+  background-color: $primary;
+}

@@ -139,15 +139,15 @@
         <h1 class="mt-5 offers-header">Offers</h1>
         <section class="modal hidden">
           <div class="modal-overlay"></div>
-          <div class="modal-content">
-            <div class="card">
+          <div class="card-wrapper">
+            <div class="card text-center rounded-5 card-face card-face--front">
               <img
-                src="../src/images/products/banana.jpg"
-                class="card-img-top"
-                alt="dummy image"
+                src="/src/images/products/banana.jpg"
+                alt="${product.imgAlt}"
+                class="card-image-top rounded-top-5"
               />
-              <div class="card-body">
-                <h4 class="modal-item-name">Name</h4>
+              <div class="card-body justify-content-center">
+                <h4 class="modal-item-name card-title">Name</h4>
                 <input
                   type="number"
                   class="modal-item-qty"
@@ -155,13 +155,15 @@
                   name="qty"
                   value="1"
                 />
-                <button class="modal-btn">Add to cart</button>
+                <button class="btn btn-primary color-secondary modal-btn">
+                  Add to cart
+                </button>
               </div>
             </div>
           </div>
         </section>
         <section class="content-wrapper">
-          <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4"></div>
+          <div class="offers-content"></div>
         </section>
       </section>
     </main>

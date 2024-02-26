@@ -1,0 +1,47 @@
+$primary: #f46200;
+$secondary: #eef4ed;
+$tertiary: #7e5433;
+
+$backgroud-light: #ffdeeb;
+$background-medium: #fcc2d7;
+$background-dark: #d6336c;
+
+$text-light: #fff0f6;
+$text-medium: #f976a6;
+$text-dark: #a61e4d;
+
+$font-display: 'PT Sans Caption', sans-serif;
+
+$xs: 0;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
+// FONT SIZE
+$font-xs: 0.833rem;
+$font-sm: 1rem;
+$font-md: 1.2rem;
+$font-lg: 1.563rem;
+$font-xl: 2.488rem;
+$font-xxl: 2.986rem;
+
+$shadow-light: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
+$shadow-medium: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.4);
+$shadow-dark: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.5);
+
+// BREAKPOINTS
+// 1800px
+$bp-desktop: 112.5em;
+// 1200px
+$bp-tab-land: 75em;
+// 992px
+$bp-tab-port: 62em;
+// 576px
+$bp-phone: 36em;
+// 450px
+$bp-phone-sm: 28.125em;
+
+// cta-btn
+$cta-btn-width: 4rem;

@@ -30,7 +30,7 @@
 
 .about-main {
   .about-main-wrapper {
-    padding: 12rem 7rem;
+    padding: 12rem 7rem 0rem;
     .about-main-block {
       padding-bottom: 6rem;
       justify-content: space-between;
@@ -63,6 +63,50 @@
           margin: auto;
         }
       }
+    }
+  }
+}
+
+.section-founder {
+  .section-founder-wrapper {
+    padding: 5rem 0;
+    background-color: #fff;
+
+    border-radius: 1rem;
+  }
+  .founder {
+    color: $tertiary;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+
+    margin-bottom: 3rem;
+
+    &__name {
+      font-weight: bold;
+      font-size: 3rem;
+    }
+    &__img {
+      max-width: 300px;
+    }
+    &__img-box {
+    }
+    &__meet {
+      text-transform: uppercase;
+      letter-spacing: 0.2rem;
+      font-size: 2rem;
+      color: $primary;
+
+      margin-bottom: 3rem;
+    }
+    &__details {
+      font-size: 0.8rem;
+      line-height: 1.8;
+
+      padding: 0 5rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
     }
   }
 }

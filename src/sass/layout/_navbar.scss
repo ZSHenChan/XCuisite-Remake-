@@ -6,13 +6,12 @@
     flex-direction: row-reverse;
     padding-right: 1rem;
     padding-left: 1rem;
-    background-color: rgba(244, 98, 0, 0.9);
+    background-color: rgba(244, 98, 0, 1);
     height: 4rem;
 
     .navbar-menuback {
       position: fixed;
       left: 16px;
-      top: 9px;
     }
 
     .navbar-brand {
@@ -29,8 +28,8 @@
     }
 
     .navbar-nav-scroll {
-      -webkit-backdrop-filter: blur(10px);
-      backdrop-filter: blur(10px);
+      // -webkit-backdrop-filter: blur(10px);
+      // backdrop-filter: blur(10px);
       --bs-scroll-height: 100dvh;
 
       @media (width<$md) {
@@ -41,7 +40,7 @@
         left: 0;
         transition: 0.6s ease-in-out !important;
         overflow-y: hidden;
-        background-color: rgba(244, 98, 0, 0.8);
+        background-color: rgba(244, 98, 0, 1);
         text-indent: 2rem;
         .navbar-nav {
           height: 100dvh;
@@ -106,7 +105,7 @@
     z-index: 4;
     left: 0;
     top: 0px;
-    background-color: rgba(244, 98, 0, 0.9);
+    background-color: rgba(244, 98, 0, 1);
     backdrop-filter: blur(20px);
     overflow-y: hidden;
     transition: 0.4s ease-in-out;

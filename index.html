@@ -126,7 +126,9 @@
     </header>
     <main class="rounded-3 text-center p-0" id="main-body">
       <section class="intro section-hero">
-        <h1 class="hero-caption" role="banner">Strawberry Flamingo</h1>
+        <div class="hero-caption-container">
+          <h1 class="hero-caption" role="banner">Strawberry Flamingo</h1>
+        </div>
 
         <div class="video">
           <img
@@ -159,80 +161,72 @@
       </section>
 
       <section class="section-post-intro">
-        <a href="html/offers.html" class="intro-cta-btn-container"
-          ><button class="intro-cta-btn expand-btn delay-animation">
-            Get Now
-          </button></a
-        >
-        <div class="post-intro-section-container">
-          <div class="post-intro-section">
-            <div class="row row-cols-1 row-cols-md-2 align-items-center">
-              <div class="col d-none d-md-block reveal post-intro-sub-header">
-                <h2>Classic</h2>
-                <p>Our beloved ones</p>
-              </div>
-              <div class="col post-intro-section-img">
-                <picture
-                  ><source srcset="./src/images/index/post-intro-1.webp" />
-                  <img
-                    class="img-fluid"
-                    src="./src/images/index/post-intro-1.jpg"
-                    alt="our classic doughnut"
-                /></picture>
-              </div>
-              <div class="col d-md-none reveal post-intro-sub-header">
-                <h2>Classic</h2>
-                <p>Our beloved ones</p>
-              </div>
-            </div>
+        <a
+          href="html/offers.html"
+          class="btn intro-cta-btn expand-btn delay-animation"
+          >Get Now
+        </a>
+
+        <div class="section-post-intro-grid">
+          <div class="reveal section-post-intro-grid-content d-phone-none">
+            <h2 class="h-3">Classic</h2>
+            <p class="section-post-intro-grid-text">Our beloved ones</p>
           </div>
-          <div class="post-intro-section">
-            <div class="row row-cols-1 row-cols-md-2 align-items-center">
-              <div class="col post-intro-section-img">
-                <picture
-                  ><source srcset="./src/images/index/post-intro-2.webp" />
-                  <img
-                    class="img-fluid"
-                    src="./src/images/index/post-intro-2.jpg"
-                    alt="fresh strawberries"
-                /></picture>
-              </div>
-              <div class="col reveal post-intro-sub-header">
-                <h2>More Fresh Strawberries</h2>
-                <p>More Tasty</p>
-              </div>
-            </div>
+          <div class="section-post-intro-grid-img-container">
+            <picture
+              ><source srcset="./src/images/index/post-intro-1.webp" />
+              <img
+                class="section-post-intro-grid-img"
+                src="./src/images/index/post-intro-1.jpg"
+                alt="our classic doughnut"
+            /></picture>
           </div>
-          <div class="post-intro-section">
-            <div class="row row-cols-1 row-cols-md-2 align-items-center">
-              <div class="col d-none d-md-block reveal post-intro-sub-header">
-                <h2>More Flavours</h2>
-                <p>More Experiences</p>
-              </div>
-              <div class="col post-intro-section-img">
-                <picture
-                  ><source srcset="./src/images/index/post-intro-3.webp" />
-                  <img
-                    class="img-fluid"
-                    src="./src/images/index/post-intro-3.jpg"
-                    alt="image of rows of doughnuts"
-                /></picture>
-              </div>
-              <div class="col d-md-none reveal post-intro-sub-header">
-                <h2>More Flavours</h2>
-                <p>More Experiences</p>
-              </div>
-            </div>
+          <div class="reveal section-post-intro-grid-content d-phone">
+            <h2 class="h-3">Classic</h2>
+            <p class="section-post-intro-grid-text">Our beloved ones</p>
+          </div>
+          <div class="section-post-intro-grid-img-container">
+            <picture
+              ><source srcset="./src/images/index/post-intro-2.webp" />
+              <img
+                class="section-post-intro-grid-img"
+                src="./src/images/index/post-intro-2.jpg"
+                alt="our classic doughnut"
+            /></picture>
+          </div>
+          <div class="reveal section-post-intro-grid-content">
+            <h2 class="h-3">Classic</h2>
+            <p class="section-post-intro-grid-text">Our beloved ones</p>
+          </div>
+
+          <div class="reveal section-post-intro-grid-content d-phone-none">
+            <h2 class="h-3">Classic</h2>
+            <p class="section-post-intro-grid-text">Our beloved ones</p>
+          </div>
+          <div class="section-post-intro-grid-img-container">
+            <picture
+              ><source srcset="./src/images/index/post-intro-3.webp" />
+              <img
+                class="section-post-intro-grid-img"
+                src="./src/images/index/post-intro-3.jpg"
+                alt="our classic doughnut"
+            /></picture>
+          </div>
+          <div class="reveal section-post-intro-grid-content d-phone">
+            <h2 class="h-3">Classic</h2>
+            <p class="section-post-intro-grid-text">Our beloved ones</p>
           </div>
         </div>
       </section>
 
       <section class="section-grid">
         <div class="section-grid-wrapper">
-          <h2 class="reveal header-2 section-grid-header">
+          <h2 class="reveal h-2 section-grid-header">
             New Flavour. New Happiness
           </h2>
-          <p class="reveal section-grid-header">random</p>
+          <p class="reveal section-grid-subheader mb-lg">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, quae.
+          </p>
           <section class="grid-gallery-container">
             <div class="row row-cols-1 row-cols-xl-2">
               <div class="grid-gallery col grid-gallery-1">
@@ -327,7 +321,7 @@
       <section class="section-transparent"></section>
 
       <section class="section-carousel">
-        <h2 class="header-2 carousel-header reveal">Meet Our Old Friends</h2>
+        <h2 class="h-2 carousel-header reveal">Meet Our Old Friends</h2>
         <div class="carousel-wrapper">
           <div class="card-wrapper">
             <div class="card-container"></div>

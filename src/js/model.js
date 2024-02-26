@@ -1,5 +1,5 @@
 const product0 = {
-  productName: 'Strawberry&nbsp;Indulgence',
+  productName: 'Strawberry Indulgence',
   id: 0,
   description: 'Strawberry Beast',
   img: 'strawberry-indulgence.jpg',

@@ -5,23 +5,36 @@
   top: 0;
   left: 0;
   z-index: -1;
+  display: grid;
 
   background-color: $backgroud-light;
 
   .hero-caption {
-    display: none;
-    font-size: 4.5rem;
-    @media (min-width: $sm) {
-      font-size: 7rem;
+    &-container {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -60%);
+      z-index: 1;
     }
-    @media (min-width: $md) {
+    display: none;
+    font-size: 12rem;
+    width: 100%;
+    text-align: center;
+    width: 10ch;
+    @include respond(tab-land) {
       font-size: 10rem;
     }
-    @media (min-width: $xl) {
-      font-size: 12rem;
+    @include respond(tab-port) {
+      font-size: 7rem;
+    }
+    @include respond(phone) {
+      font-size: 5rem;
+    }
+    @include respond(phone-sm) {
+      font-size: 4rem;
     }
     font-weight: bold;
-    // text-wrap: wrap;
     color: transparent;
 
     -webkit-text-fill-color: transparent;
@@ -41,12 +54,6 @@
     background-clip: text;
     -webkit-background-clip: text;
     background-size: 200%;
-
-    position: absolute;
-    left: 50%;
-    margin-left: -50%;
-    top: 50%;
-    margin-top: -20%;
 
     animation-name: text-zoom-out;
     animation-duration: 5s;
@@ -69,23 +76,53 @@
 }
 
 .section-post-intro {
-  width: 100%;
   background-color: $background-dark;
   color: $text-light;
-  padding: 200px 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15rem 3rem;
+
+  &-grid {
+    display: grid;
+    max-width: 112.5rem;
+    grid-template-columns: repeat(2, min-content);
+    align-items: center;
+    justify-content: center;
+    column-gap: 10rem;
+    row-gap: 5rem;
+
+    &-content {
+      transition: all 1s;
+    }
+    &-img {
+      border-radius: 50%;
+      max-width: 20dvw;
+      min-width: 20rem;
+    }
+
+    &-text {
+      transition: all 1s;
+      letter-spacing: 0.05rem;
+    }
+
+    @include respond(phone) {
+      grid-template-columns: 1fr;
+      width: 100%;
+    }
+  }
 
   .intro-cta-btn {
+    text-decoration: none;
     display: none;
-    line-height: 1.8rem;
-    outline: none;
-    border: none;
+    line-height: 1.7rem;
     background-color: $secondary;
     color: $secondary;
-    text-align: center;
     letter-spacing: 0.1rem;
-    font-weight: bold;
-    font-size: 1.5rem;
+    font-size: $font-lg;
 
+    padding: 1rem;
     border-radius: 2rem;
     position: fixed;
     right: 3rem;
@@ -115,38 +152,24 @@
     animation-delay: 0s;
     animation-fill-mode: forwards;
   }
+}
 
-  .post-intro-sub-header {
+.section-grid {
+  padding: 12.5rem 1.5625rem;
+  @media (max-width: $md) {
+    padding: 6.25rem 0;
+  }
+  background-color: $background-medium;
+  color: $text-dark;
+  max-width: 100%;
+  &-wrapper {
+    padding: 0;
+  }
+  &-header {
     transition: all 1s;
   }
-  .post-intro-section-container {
-    @media (max-width: $sm) {
-      padding: 0px 50px;
-    }
-    padding: 50px 100px;
-
-    .post-intro-section-img img {
-      border-radius: 50%;
-      max-width: 300px;
-      padding: 25px;
-    }
-    .post-intro-section {
-      display: grid;
-      text-align: center;
-
-      .col {
-        h2 {
-          font-weight: bold;
-          font-size: 2.441rem;
-          padding: 20px 0;
-          letter-spacing: 0.1rem;
-        }
-        p {
-          font-size: 1.563rem;
-          padding: 20px 0;
-          letter-spacing: 0.05rem;
-        }
-      }
-    }
+  &-subheader {
+    font-weight: bold;
+    font-size: $font-md;
   }
 }

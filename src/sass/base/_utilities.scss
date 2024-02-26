@@ -1,0 +1,38 @@
+.default-img {
+  max-width: 100%;
+  border-radius: 1rem;
+  &-round {
+    max-width: 100%;
+    border-radius: 50%;
+  }
+}
+
+.default-wrapper {
+  padding: 10rem 3rem;
+}
+
+.d-phone-none {
+  @include respond(phone) {
+    display: none;
+  }
+}
+
+.d-phone {
+  display: none;
+  @include respond(phone) {
+    display: block;
+  }
+}
+
+.mb-sm {
+  margin-bottom: 1rem;
+}
+.mb-md {
+  margin-bottom: 2rem;
+}
+.mb-lg {
+  margin-bottom: 4rem;
+}
+.mb-xl {
+  margin-bottom: 8rem;
+}

@@ -1,0 +1,95 @@
+.offers {
+  &-header {
+    color: $primary;
+    font-weight: bold;
+    font-size: 5rem;
+    letter-spacing: 0.2rem;
+    @media (max-width: $lg) {
+      font-size: 3rem;
+    }
+  }
+  .content-wrapper {
+    width: 100%;
+    padding: 10rem 5dvw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &-content {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, min-content));
+    grid-gap: 2rem;
+  }
+
+  .card-wrapper {
+    transition: all 0.5s;
+  }
+
+  .modal {
+    .modal-overlay {
+      @include absCornerTopleft;
+      height: 100dvh;
+      width: 100dvw;
+    }
+    z-index: 5;
+    @include fixedCornerTopleft();
+    height: 100dvh;
+    width: 100dvw;
+    background-color: rgba(36, 32, 32, 0.6);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    display: grid;
+    place-items: center;
+
+    .card {
+      border: none;
+      &-wrapper {
+        max-width: 23rem;
+      }
+      &-body {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+      }
+    }
+
+    &-item-name {
+      font-weight: bold;
+      font-size: $font-lg;
+      margin-bottom: 1rem;
+      max-width: 10ch;
+      align-self: center;
+    }
+    input {
+      margin-bottom: 1.5rem;
+      text-align: center;
+      padding: 1rem;
+      align-self: center;
+      font-family: inherit;
+      font-weight: bold;
+    }
+    &-btn {
+      display: block;
+      border: none;
+      outline: none;
+      background-color: $primary;
+      color: $secondary;
+      padding: 0.8rem 3rem;
+      border-radius: 1rem;
+      align-self: center;
+      font-weight: bold;
+      font-size: 1.4rem;
+
+      &:hover {
+        background-color: #f8731b;
+      }
+    }
+  }
+  .hidden {
+    display: none !important;
+  }
+}

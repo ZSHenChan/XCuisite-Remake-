@@ -1,0 +1,25 @@
+%headings {
+  // font-family: $font-display;
+}
+
+.h-1 {
+  @extend %headings;
+}
+
+.h-2 {
+  @extend %headings;
+  font-weight: 700;
+  font-size: $font-xxl;
+  letter-spacing: 0.1rem;
+}
+
+.h-3 {
+  @extend %headings;
+  font-size: $font-xl;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
+
+.h-4 {
+  @extend %headings;
+}

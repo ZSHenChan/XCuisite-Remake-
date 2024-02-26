@@ -12,11 +12,16 @@
   "devDependencies": {
     "@parcel/transformer-sass": "^2.11.0",
     "bootstrap": "^5.3.2",
-    "parcel": "^2.11.0"
+    "parcel": "^2.11.0",
+    "parcel-reporter-static-files-copy": "^1.5.3"
   },
   "dependencies": {
     "bootstrap-icons": "^1.11.3",
     "core-js": "^3.35.1",
     "regenerator": "^0.14.12"
+  },
+  "staticFiles": {
+    "staticPath": "./src/images",
+    "watcherGlob": "**"
   }
 }
