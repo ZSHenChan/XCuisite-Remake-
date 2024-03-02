@@ -202,8 +202,8 @@
       .check-out {
         &-btn {
           position: absolute;
-          right: 5dvw;
-          top: 43%;
+          right: 7dvw;
+          top: 35dvh;
 
           background-color: $secondary-light;
           color: $primary;
@@ -222,6 +222,10 @@
 
       @include respond(tab-port) {
         margin-top: 3.5rem;
+        padding: 3dvh 3dvw;
+        .check-out-btn {
+          right: 3dvw;
+        }
       }
     }
 
