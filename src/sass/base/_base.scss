@@ -17,12 +17,9 @@ html {
   @include respond(tab-land) {
     font-size: 80%;
   }
-  @include respond(tab-port) {
-    font-size: 70%;
-  }
-  @include respond(phone) {
-    font-size: 60%;
-  }
+  // @include respond(tab-port) {
+  //   font-size: 70%;
+  // }
 }
 
 body {
