@@ -1,19 +1,10 @@
 import Component from './component';
 import imageTn from '../../images/products/banana_tn.jpg';
 
-class Cart extends Component {
-  _parentEl = document.querySelector('.in-cart-wrapper');
-
-  _cartIcon = document.getElementById('cart-icon');
-  _cartQty = document.getElementById('cart-qty');
-
-  _data;
+class ViewCheckOut extends Component {
+  _parentEl = document.querySelector('.section-products .items');
   _msg = '<span class="h4 mt-3">Your cart is empty</span>';
 
-  renderCartQty = function (qty) {
-    if (qty < 0) return;
-    this._cartQty.textContent = `${qty === 0 ? '' : qty}`;
-  };
   _generateMarkups() {
     return this._data
       .map(data => this._generateMarkup(data.product, data.qty))
@@ -31,11 +22,12 @@ class Cart extends Component {
               height="64"
             />
           </div>
+          <div class="item-qty"> x${qty}</div>
           <div class="item-name"
-            >${product.productName}<br><span class="item-qty"> x${qty}</span></div
+            >${product.productName}</div
           >
         </li>`;
   }
 }
 
-export default new Cart();
+export default new ViewCheckOut();

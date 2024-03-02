@@ -170,7 +170,7 @@
 
     &-content {
       color: $secondary;
-      padding: 3dvh 5dvw;
+      padding: 3dvh 7dvw;
       position: relative;
       margin-top: 3dvw;
 
@@ -184,25 +184,44 @@
         display: flex;
         flex-direction: column;
         font-size: $font-md;
-        overflow-y: scroll;
-        height: 100%;
-        z-index: 3;
-
-        &::-webkit-scrollbar {
-          display: none;
-        }
+        padding: 0 5dvw;
 
         .item {
           list-style: none;
           margin-bottom: 1.2rem;
+          display: grid;
+          grid-template-columns: min-content 1fr;
+          align-items: center;
 
           &-img {
             margin-right: 20px;
-            @media (width<$md) {
-              margin-right: 50px;
-            }
           }
         }
+      }
+
+      .check-out {
+        &-btn {
+          position: absolute;
+          right: 5dvw;
+          top: 43%;
+
+          background-color: $secondary-light;
+          color: $primary;
+          padding: 0.5rem;
+
+          // &:hover {
+          //   .check-out-arrow {
+          //     transform: translateX(5px);
+          //   }
+          // }
+        }
+        // &-arrow {
+        //   transition: transform 0.5s ease-in-out;
+        // }
+      }
+
+      @include respond(tab-port) {
+        margin-top: 3.5rem;
       }
     }
 

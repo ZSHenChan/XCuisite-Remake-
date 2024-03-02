@@ -25,14 +25,14 @@
 }
 
 .mb-sm {
-  margin-bottom: 1rem;
+  margin-bottom: $spacing;
 }
 .mb-md {
-  margin-bottom: 2rem;
+  margin-bottom: $spacing * 2;
 }
 .mb-lg {
-  margin-bottom: 4rem;
+  margin-bottom: $spacing * 4;
 }
 .mb-xl {
-  margin-bottom: 8rem;
+  margin-bottom: $spacing * 8;
 }

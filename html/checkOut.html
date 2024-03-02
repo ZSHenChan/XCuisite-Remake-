@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>XCuisite - offers</title>
+    <title>XCuisite - check out</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,7 +22,7 @@
 
     <script
       type="module"
-      src="../src/js/controllers/controllerOffers.js"
+      src="../src/js/controllers/controllerCheckOut.js"
     ></script>
   </head>
 
@@ -66,9 +66,6 @@
       </nav>
       <div class="global-curtain" id="cart-curtain">
         <div class="global-curtain-content">
-          <a class="check-out-btn btn btn-primary" href="./checkOut.html"
-            >Check Out <span class="check-out-arrow">&rarr;</span></a
-          >
           <span class="d-flex justify-content-between align-items-center"
             ><h3 class="cart-header">Your Items</h3>
             <button
@@ -84,45 +81,63 @@
       <div class="global-curtain-bottom" id="global-curtain-bottom"></div>
     </header>
 
-    <main class="bg-secondary rounded-3 text-center p-0">
-      <div class="subpage-intro">
-        <img
-          class="img-fluid rounded-top-3"
-          src="/src/images/products/offers-hero.jpg"
-          alt="offers banner - a doughnut with colourful sprinkles"
-        />
-      </div>
-
-      <section class="offers rounded-3 text-center p-0">
-        <h1 class="mt-5 offers-header">Offers</h1>
-        <section class="modal hidden">
-          <div class="modal-overlay"></div>
-          <div class="card-wrapper">
-            <div class="card text-center rounded-5 card-face card-face--front">
+    <main class="bg-secondary rounded-3 p-0 checkout-main">
+      <section class="section-total">
+        <h1 class="h-1 mb-sm">
+          Your order total is $<span class="section-total__total amount"
+            >94.00</span
+          >
+        </h1>
+        <div class="section-total-details mb-md">
+          Free delivery for orders over $100
+        </div>
+        <button class="btn-checkout-payment btn btn-primary mb-lg">
+          Check Out
+        </button>
+        <div class="we-accept">
+          <p class="we-accept__heading">we accept:</p>
+          <div class="we-accept__logos">
+            <figure class="we-accept__img__container">
               <img
-                src="/src/images/products/banana.jpg"
-                alt="${product.imgAlt}"
-                class="card-image-top rounded-top-5"
+                src="../src/images/checkOut/applepay.png"
+                alt="apple pay"
+                class="we-accept__img"
               />
-              <div class="card-body justify-content-center">
-                <h4 class="modal-item-name card-title">Name</h4>
-                <input
-                  type="number"
-                  class="modal-item-qty"
-                  min="1"
-                  name="qty"
-                  value="1"
-                />
-                <button class="btn btn-primary color-secondary modal-btn">
-                  Add to cart
-                </button>
-              </div>
-            </div>
+            </figure>
+            <figure class="we-accept__img__container">
+              <img
+                src="../src/images/checkOut/googlepay.png"
+                alt="google pay"
+                class="we-accept__img"
+              />
+            </figure>
+            <figure class="we-accept__img__container">
+              <img
+                src="../src/images/checkOut/grabpay.png"
+                alt="grab pay"
+                class="we-accept__img"
+              />
+            </figure>
           </div>
-        </section>
-        <section class="content-wrapper">
-          <div class="offers-content"></div>
-        </section>
+        </div>
+      </section>
+      <section class="section-products"><ul class="items"></ul></section>
+      <section class="section-summary">
+        <div class="summary mb-lg">
+          <p class="m-0 summary__heading">Subtotal</p>
+          <div class="total-checkout__amount">
+            $<span class="amount">89.00</span>
+          </div>
+          <p class="mb-sm summary__heading">Shipping</p>
+          <div class="total-checkout__shipping mb-sm">
+            $<span class="shipping-amount">5.00</span>
+          </div>
+          <p class="summary__heading total-checkout__grand m-0">Grand Total</p>
+          <div class="grand-total">
+            $<span class="grand-total__amount">94.00</span>
+          </div>
+        </div>
+        <button class="btn-checkout-payment btn btn-primary">Check Out</button>
       </section>
     </main>
 

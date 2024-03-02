@@ -1,0 +1,129 @@
+%default-section-padding {
+  padding-left: 20dvw;
+  padding-right: 20dvw;
+
+  @include respond(phone) {
+    padding-left: 5dvw;
+    padding-right: 5dvw;
+  }
+}
+
+.checkout-main {
+  .section-total {
+    padding-top: 7rem;
+    padding-bottom: 2rem;
+    @extend %default-section-padding;
+    text-align: center;
+
+    &-details {
+      font-size: $font-md;
+    }
+
+    .we-accept {
+      padding-bottom: 2rem;
+      border-bottom: $primary 2px solid;
+      &__heading {
+        font-size: $font-md;
+      }
+      &__logos {
+        display: block;
+      }
+      &__img {
+        max-height: 100%;
+        max-width: 100%;
+
+        &__container {
+          height: 32px;
+          display: inline-block;
+          border-radius: 0.5rem;
+          overflow: hidden;
+
+          &:not(:last-child) {
+            margin-right: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  .section-products {
+    @extend %default-section-padding;
+    padding-top: 5dvw;
+    .items {
+      list-style: none;
+      padding: 5dvw;
+      border: 2px #fff solid;
+      border-radius: 2rem;
+    }
+
+    .item {
+      display: grid;
+      grid-template-columns: max-content 1fr;
+      row-gap: 0.5rem;
+      align-items: center;
+      margin-bottom: 3dvw;
+      @include respond(phone) {
+        margin-bottom: 6dvw;
+      }
+
+      &-name {
+        font-size: $font-md;
+      }
+      &-qty {
+        justify-self: end;
+        font-weight: bold;
+        font-size: $font-lg;
+        color: $primary;
+      }
+    }
+  }
+
+  .section-summary {
+    padding-top: 1rem;
+    padding-bottom: 10rem;
+    @extend %default-section-padding;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+
+    .summary {
+      min-width: 20rem;
+      max-width: 30rem;
+      display: grid;
+      grid-template-columns: max-content 1fr;
+      justify-items: end;
+      align-items: center;
+      row-gap: 1rem;
+
+      &__heading {
+        justify-self: start;
+      }
+    }
+
+    .total-checkout__grand {
+      font-size: $font-lg;
+      font-weight: bold;
+    }
+    .grand-total {
+      color: $primary;
+      font-size: $font-lg;
+      margin-bottom: 0;
+      font-weight: bold;
+      font-size: $font-md;
+      &__amount {
+        font-size: $font-xl;
+      }
+    }
+  }
+
+  .btn-checkout-payment {
+    padding: 1rem 3rem;
+    font-size: $font-lg;
+    color: $secondary-light;
+
+    &:hover,
+    &:active {
+      color: $secondary;
+    }
+  }
+}
