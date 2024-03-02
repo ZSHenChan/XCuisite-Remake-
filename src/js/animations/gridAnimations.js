@@ -1,5 +1,5 @@
 class GridAnimations {
-  _gridItemsNum = [2, 4, 5, 7];
+  _gridItemsNum = [9];
 
   _gridItemObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -12,7 +12,7 @@ class GridAnimations {
 
   addHandlerGridAnimation = function () {
     this._gridItemsNum.forEach(gridItemNum => {
-      const gridItem = document.querySelector(`.grid-item-${gridItemNum}`);
+      const gridItem = document.querySelector(`.grid-item--${gridItemNum}`);
       this._gridItemObserver.observe(gridItem);
     });
   };

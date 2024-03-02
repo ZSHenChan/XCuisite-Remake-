@@ -33,83 +33,45 @@
   </head>
   <body>
     <header class="global-header">
-      <nav
-        class="navbar navbar-dark sticky-top navbar-expand-md px-4 bg-primary"
-      >
+      <nav class="navbar navbar-dark sticky-top">
         <a href="#" class="navbar-menuback">
           <img
-            src="./src/images/logos/xcuisite-logo-192.png"
-            alt="xcuisite-logo"
-            width="45"
-            height="45"
+            src="/src/images/logos/xcuisite-logo-64.png"
+            alt="xcuisite logo"
+            class="navbar-menuback__logo"
           />
         </a>
+        <ul class="navbar-nav navbar-nav--right">
+          <li id="cart-icon">
+            <i class="bi bi-gift nav-link"></i><span id="cart-qty">&nbsp;</span>
+          </li>
+          <div for="navbar-nav-checkbox" class="navbar-nav-btn">
+            <div class="navbar-nav-icon"></div>
+          </div>
+          <div class="navbar-nav-background">&nbsp;</div>
+        </ul>
 
-        <div class="navbar-nav">
-          <span id="cart-icon" class="cart-icon"
-            ><i class="bi bi-gift nav-link"></i><span id="cart-qty"></span
-          ></span>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#main-nav"
-            aria-controls="main-nav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-
-        <div class="collapse navbar-collapse navbar-nav-scroll" id="main-nav">
-          <ul class="navbar-nav">
-            <li class="navbar-item">
-              <a href="#" class="navbar-brand" aria-label="main page">
-                <img
-                  src="./src/images/logos/xcuisite-logo-192.png"
-                  alt="xcuisite-logo"
-                  width="45"
-                  height="45"
-                />
-              </a>
-            </li>
-            <li class="navbar-item">
-              <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#main-nav"
-                aria-controls="main-nav"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-                style="position: absolute; right: 24px; top: 8px"
-              >
-                <span class="navbar-toggler-icon"></span>
-              </button>
-            </li>
-            <li class="navbar-item">
-              <a href="/html/about.html" class="nav-link">About</a>
-            </li>
-            <li class="navbar-item">
-              <a href="/html/offers.html" class="nav-link">Offers</a>
-            </li>
-            <li class="navbar-item">
-              <a href="html/stores.html" class="nav-link">Stores</a>
-            </li>
-            <li class="navbar-item">
-              <a href="html/contactUs.html" class="nav-link">Contact&nbsp;Us</a>
-            </li>
-            <li class="navbar-item">
-              <a href="html/joinUs.html" class="nav-link">Join&nbsp;Us</a>
-            </li>
-          </ul>
-        </div>
+        <ul class="navbar-nav navbar-nav--left">
+          <li class="navbar-item">
+            <a href="./html/about.html" class="nav-link">About</a>
+          </li>
+          <li class="navbar-item">
+            <a href="./html/offers.html" class="nav-link">Offers</a>
+          </li>
+          <li class="navbar-item">
+            <a href="./html/stores.html" class="nav-link">Stores</a>
+          </li>
+          <li class="navbar-item">
+            <a href="./html/contactUs.html" class="nav-link">Contact&nbsp;Us</a>
+          </li>
+          <li class="navbar-item">
+            <a href="./html/joinUs.html" class="nav-link">Join&nbsp;Us</a>
+          </li>
+        </ul>
       </nav>
       <div class="global-curtain" id="cart-curtain">
         <div class="global-curtain-content">
-          <span
-            class="global-curtain-content-wrapper d-flex justify-content-between align-items-center"
+          <span class="d-flex justify-content-between align-items-center"
             ><h3 class="cart-header">Your Items</h3>
             <button
               class="btn btn-secondary text-primary fw-bolder empty-cart-btn"
@@ -117,9 +79,8 @@
               Empty Cart
             </button></span
           >
-          <div class="in-cart-wrapper">
-            <span class="h4 mt-3 ms-4">Your cart is empty</span>
-          </div>
+          <span></span>
+          <div class="in-cart-wrapper"></div>
         </div>
       </div>
       <div class="global-curtain-bottom" id="global-curtain-bottom"></div>
@@ -227,94 +188,152 @@
           <p class="reveal section-grid-subheader mb-lg">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, quae.
           </p>
-          <section class="grid-gallery-container">
-            <div class="row row-cols-1 row-cols-xl-2">
-              <div class="grid-gallery col grid-gallery-1">
-                <div class="grid-item grid-item-1">
-                  <picture>
-                    <source srcset="./src/images/index/grid-gallery-1.webp" />
-                    <img
-                      loading="lazy"
-                      src="./src/images/index/grid-gallery-1.jpg"
-                      alt="lots of pinky donuts"
-                    />
-                  </picture>
-                </div>
-                <div class="grid-item grid-item-2">
-                  <picture>
-                    <source srcset="./src/images/index/grid-gallery-2.webp" />
-                    <img
-                      loading="lazy"
-                      src="./src/images/index/grid-gallery-2.jpg"
-                      alt="donuts with icing"
-                    />
-                  </picture>
-                </div>
-                <div class="grid-item grid-item-3">
-                  <picture>
-                    <source srcset="./src/images/index/grid-gallery-3.webp" />
-                    <img
-                      loading="lazy"
-                      src="./src/images/index/grid-gallery-3.jpeg"
-                      alt="image of different donuts display"
-                    />
-                  </picture>
-                </div>
-                <div class="grid-item grid-item-4">
-                  <picture>
-                    <source srcset="./src/images/index/grid-gallery-4.webp" />
-                    <img
-                      loading="lazy"
-                      src="./src/images/index/grid-gallery-4.jpg"
-                      alt="plateful of donuts with creams and fruits on it"
-                    />
-                  </picture>
-                </div>
-              </div>
-              <div class="grid-gallery col grid-gallery-2">
-                <div class="grid-item grid-item-5">
-                  <picture>
-                    <source srcset="./src/images/index/grid-gallery-5.webp" />
-                    <img
-                      loading="lazy"
-                      src="./src/images/index/grid-gallery-5.jpg"
-                      alt="bluish donut holding by someone"
-                    />
-                  </picture>
-                </div>
-                <div class="grid-item grid-item-6">
-                  <picture>
-                    <source srcset="./src/images/index/grid-gallery-6.webp" />
-                    <img
-                      loading="lazy"
-                      src="./src/images/index/grid-gallery-6.jpg"
-                      alt="more donuts just came out from the oven"
-                    />
-                  </picture>
-                </div>
-                <div class="grid-item grid-item-7">
-                  <picture>
-                    <source srcset="./src/images/index/grid-gallery-7.webp" />
-                    <img
-                      loading="lazy"
-                      src="./src/images/index/grid-gallery-7.jpg"
-                      alt="donuts displayed on plate"
-                    />
-                  </picture>
-                </div>
-                <div class="grid-item grid-item-8">
-                  <picture>
-                    <source srcset="./src/images/index/grid-gallery-8.webp" />
-                    <img
-                      loading="lazy"
-                      src="./src/images/index/grid-gallery-8.jpg"
-                      alt="pinky donuts on plate with a gigantic cake"
-                    />
-                  </picture>
-                </div>
-              </div>
-            </div>
-          </section>
+          <div class="grid-gallery-container">
+            <picture class="grid-item grid-item--1">
+              <source srcset="./src/images/index/grid-gallery-1.webp" />
+              <img
+                loading="lazy"
+                src="./src/images/index/grid-gallery-1.jpg"
+                alt="lots of pinky donuts"
+                class="grid-img"
+              />
+            </picture>
+            <picture class="grid-item grid-item--2">
+              <source srcset="./src/images/index/grid-gallery-2.webp" />
+              <img
+                loading="lazy"
+                src="./src/images/index/grid-gallery-2.jpg"
+                alt="donuts with icing"
+                class="grid-img"
+              />
+            </picture>
+            <picture class="grid-item grid-item--3">
+              <source srcset="./src/images/index/grid-gallery-3.webp" />
+              <img
+                loading="lazy"
+                src="./src/images/index/grid-gallery-3.jpeg"
+                alt="image of different donuts display"
+                class="grid-img"
+              />
+            </picture>
+            <picture class="grid-item grid-item--4">
+              <source srcset="./src/images/index/grid-gallery-4.webp" />
+              <img
+                loading="lazy"
+                src="./src/images/index/grid-gallery-4.jpg"
+                alt="plateful of donuts with creams and fruits on it"
+                class="grid-img"
+              />
+            </picture>
+            <picture class="grid-item grid-item--5">
+              <source srcset="./src/images/index/grid-gallery-5.webp" />
+              <img
+                loading="lazy"
+                src="./src/images/index/grid-gallery-5.jpg"
+                alt="bluish donut holding by someone"
+                class="grid-img"
+              />
+            </picture>
+            <picture class="grid-item grid-item--6">
+              <source srcset="./src/images/index/grid-gallery-6.webp" />
+              <img
+                loading="lazy"
+                src="./src/images/index/grid-gallery-6.jpg"
+                alt="more donuts just came out from the oven"
+                class="grid-img"
+              />
+            </picture>
+            <picture class="grid-item grid-item--7">
+              <source srcset="./src/images/index/grid-gallery-7.webp" />
+              <img
+                loading="lazy"
+                src="./src/images/index/grid-gallery-7.jpg"
+                alt="donuts displayed on plate"
+                class="grid-img"
+              />
+            </picture>
+            <picture class="grid-item grid-item--8">
+              <source srcset="./src/images/index/grid-gallery-8.webp" />
+              <img
+                loading="lazy"
+                src="./src/images/index/grid-gallery-8.jpg"
+                alt="grid doughnut image"
+                class="grid-img"
+              />
+            </picture>
+            <picture class="grid-item grid-item--9">
+              <source srcset="./src/images/index/grid-gallery-9.webp" />
+              <img
+                loading="lazy"
+                src="./src/images/index/grid-gallery-9.jpg"
+                alt="grid doughnut image"
+                class="grid-img"
+              />
+            </picture>
+            <picture class="grid-item grid-item--10">
+              <source srcset="./src/images/index/grid-gallery-10.webp" />
+              <img
+                loading="lazy"
+                src="./src/images/index/grid-gallery-10.jpg"
+                alt="grid doughnut image"
+                class="grid-img"
+              />
+            </picture>
+            <picture class="grid-item grid-item--11">
+              <source srcset="./src/images/index/grid-gallery-11.webp" />
+              <img
+                loading="lazy"
+                src="./src/images/index/grid-gallery-11.jpg"
+                alt="grid doughnut image"
+                class="grid-img"
+              />
+            </picture>
+            <picture class="grid-item grid-item--12">
+              <source srcset="./src/images/index/grid-gallery-12.webp" />
+              <img
+                loading="lazy"
+                src="./src/images/index/grid-gallery-12.jpg"
+                alt="grid doughnut image"
+                class="grid-img"
+              />
+            </picture>
+            <picture class="grid-item grid-item--13">
+              <source srcset="./src/images/index/grid-gallery-13.webp" />
+              <img
+                loading="lazy"
+                src="./src/images/index/grid-gallery-13.jpg"
+                alt="grid doughnut image"
+                class="grid-img"
+              />
+            </picture>
+            <picture class="grid-item grid-item--14">
+              <source srcset="./src/images/index/grid-gallery-14.webp" />
+              <img
+                loading="lazy"
+                src="./src/images/index/grid-gallery-14.jpg"
+                alt="grid doughnut image"
+                class="grid-img"
+              />
+            </picture>
+            <picture class="grid-item grid-item--15">
+              <source srcset="./src/images/index/grid-gallery-15.webp" />
+              <img
+                loading="lazy"
+                src="./src/images/index/grid-gallery-15.jpg"
+                alt="grid doughnut image"
+                class="grid-img"
+              />
+            </picture>
+            <picture class="grid-item grid-item--16">
+              <source srcset="./src/images/index/grid-gallery-16.webp" />
+              <img
+                loading="lazy"
+                src="./src/images/index/grid-gallery-16.jpg"
+                alt="grid doughnut image"
+                class="grid-img"
+              />
+            </picture>
+          </div>
         </div>
       </section>
 
@@ -340,7 +359,6 @@
               <span class="globalfooter-column-section-title-text">Stores</span>
               <button
                 id="globalfooterColumnSectionButton-Stores"
-                onclick="triggerFooterColumnSection(this.id)"
                 class="globalfooter-column-section-title-text-button btn btn-primary text-secondary px-0"
               >
                 <span>Stores</span>
@@ -371,7 +389,6 @@
               >
               <button
                 id="globalfooterColumnSectionButton-About-Us"
-                onclick="triggerFooterColumnSection(this.id)"
                 class="globalfooter-column-section-title-text-button btn btn-primary text-secondary px-0"
               >
                 <span>About Us</span>
@@ -405,7 +422,6 @@
               >
               <button
                 id="globalfooterColumnSectionButton-Shops"
-                onclick="triggerFooterColumnSection(this.id)"
                 class="globalfooter-column-section-title-text-button btn btn-primary text-secondary px-0"
               >
                 <span>Account</span>
@@ -436,7 +452,6 @@
               >
               <button
                 id="globalfooterColumnSectionButton-Shops2"
-                onclick="triggerFooterColumnSection(this.id)"
                 class="globalfooter-column-section-title-text-button btn btn-primary text-secondary px-0"
               >
                 <span>Company</span>
@@ -461,7 +476,6 @@
               >
               <button
                 id="globalfooterColumnSectionButton-Shops3"
-                onclick="triggerFooterColumnSection(this.id)"
                 class="globalfooter-column-section-title-text-button btn btn-primary text-secondary px-0"
               >
                 <span>Resources</span>
@@ -486,7 +500,6 @@
               <span class="globalfooter-column-section-title-text">Shops</span>
               <button
                 id="globalfooterColumnSectionButton-Shops4"
-                onclick="triggerFooterColumnSection(this.id)"
                 class="globalfooter-column-section-title-text-button btn btn-primary text-secondary px-0"
               >
                 <span>Shop</span>

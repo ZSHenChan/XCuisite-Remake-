@@ -28,86 +28,41 @@
 
   <body class="bg-primary">
     <header class="global-header">
-      <nav
-        class="navbar navbar-dark sticky-top navbar-expand-md px-4 bg-primary"
-      >
+      <nav class="navbar navbar-dark sticky-top">
         <a href="../index.html" class="navbar-menuback">
           <img
             src="../src/images/logos/xcuisite-logo-64.png"
             alt="xcuisite logo"
-            width="45"
-            height="45"
+            class="navbar-menuback__logo"
           />
         </a>
-        <div
-          class="navbar-nav justify-content-between d-flex flex-row align-items-center"
-        >
-          <span id="cart-icon"
-            ><i class="bi bi-gift nav-link"></i><span id="cart-qty"></span
-          ></span>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#main-nav"
-            aria-controls="main-nav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-        <div
-          class="collapse navbar-collapse navbar-nav-scroll align-items-center"
-          id="main-nav"
-          style="--bs-scroll-height: 100dvh"
-        >
-          <ul class="navbar-nav">
-            <li class="navbar-item">
-              <a
-                href="../index.html"
-                class="navbar-brand"
-                aria-label="main page"
-              >
-                <img
-                  src="../src/images/logos/xcuisite-logo-192.png"
-                  alt="xcuisite-logo"
-                  width="45"
-                  height="45"
-                />
-              </a>
-            </li>
-            <li class="navbar-item">
-              <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#main-nav"
-                aria-controls="main-nav"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-                style="position: absolute; right: 24px; top: 8px"
-              >
-                <span class="navbar-toggler-icon"></span>
-              </button>
-            </li>
-            <li class="navbar-item">
-              <a href="about.html" class="nav-link">About</a>
-            </li>
-            <li class="navbar-item">
-              <a href="#" class="nav-link">Offers</a>
-            </li>
-            <li class="navbar-item">
-              <a href="stores.html" class="nav-link">Stores</a>
-            </li>
-            <li class="navbar-item">
-              <a href="contactUs.html" class="nav-link">Contact&nbsp;Us</a>
-            </li>
-            <li class="navbar-item">
-              <a href="joinUs.html" class="nav-link">Join&nbsp;Us</a>
-            </li>
-          </ul>
-        </div>
+        <ul class="navbar-nav navbar-nav--right">
+          <li id="cart-icon">
+            <i class="bi bi-gift nav-link"></i><span id="cart-qty">&nbsp;</span>
+          </li>
+          <div for="navbar-nav-checkbox" class="navbar-nav-btn">
+            <div class="navbar-nav-icon"></div>
+          </div>
+          <div class="navbar-nav-background">&nbsp;</div>
+        </ul>
+
+        <ul class="navbar-nav navbar-nav--left">
+          <li class="navbar-item">
+            <a href="about.html" class="nav-link">About</a>
+          </li>
+          <li class="navbar-item">
+            <a href="#" class="nav-link">Offers</a>
+          </li>
+          <li class="navbar-item">
+            <a href="stores.html" class="nav-link">Stores</a>
+          </li>
+          <li class="navbar-item">
+            <a href="contactUs.html" class="nav-link">Contact&nbsp;Us</a>
+          </li>
+          <li class="navbar-item">
+            <a href="joinUs.html" class="nav-link">Join&nbsp;Us</a>
+          </li>
+        </ul>
       </nav>
       <div class="global-curtain" id="cart-curtain">
         <div class="global-curtain-content">
@@ -179,7 +134,6 @@
                 >
                 <button
                   id="globalfooterColumnSectionButton-Stores"
-                  onclick="triggerFooterColumnSection(this.id)"
                   class="globalfooter-column-section-title-text-button btn btn-primary text-secondary px-0"
                 >
                   <span>Stores</span>
@@ -210,7 +164,6 @@
                 >
                 <button
                   id="globalfooterColumnSectionButton-About-Us"
-                  onclick="triggerFooterColumnSection(this.id)"
                   class="globalfooter-column-section-title-text-button btn btn-primary text-secondary px-0"
                 >
                   <span>About Us</span>
@@ -244,7 +197,6 @@
                 >
                 <button
                   id="globalfooterColumnSectionButton-Shops"
-                  onclick="triggerFooterColumnSection(this.id)"
                   class="globalfooter-column-section-title-text-button btn btn-primary text-secondary px-0"
                 >
                   <span>Account</span>
@@ -275,7 +227,6 @@
                 >
                 <button
                   id="globalfooterColumnSectionButton-Shops2"
-                  onclick="triggerFooterColumnSection(this.id)"
                   class="globalfooter-column-section-title-text-button btn btn-primary text-secondary px-0"
                 >
                   <span>Company</span>
@@ -300,7 +251,6 @@
                 >
                 <button
                   id="globalfooterColumnSectionButton-Shops3"
-                  onclick="triggerFooterColumnSection(this.id)"
                   class="globalfooter-column-section-title-text-button btn btn-primary text-secondary px-0"
                 >
                   <span>Resources</span>
@@ -327,7 +277,6 @@
                 >
                 <button
                   id="globalfooterColumnSectionButton-Shops4"
-                  onclick="triggerFooterColumnSection(this.id)"
                   class="globalfooter-column-section-title-text-button btn btn-primary text-secondary px-0"
                 >
                   <span>Shops</span>

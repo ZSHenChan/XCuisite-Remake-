@@ -63,7 +63,7 @@
     width: 10rem;
     height: 4rem;
     transform: translateY(-8rem);
-    color: $text-medium;
+    color: $pink--medium;
   }
 }
 @keyframes contract-btn {
@@ -71,7 +71,7 @@
     width: 10rem;
     height: 4rem;
     transform: translateY(-7rem);
-    color: $text-medium;
+    color: $pink--medium;
   }
   20% {
     width: 10rem;
@@ -146,5 +146,5 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 50%);
 }

@@ -1,5 +1,5 @@
 @import './base/variables';
-@import './abtracts/mixins';
+@import './base/mixins';
 @import './base/base.scss';
 @import './base/typography';
 
@@ -16,6 +16,7 @@
 @import './components/grid.scss';
 @import './components/btn';
 @import './components/card';
+@import './components/sections';
 
 // PAGES
 @import './pages/home.scss';

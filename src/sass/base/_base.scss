@@ -1,3 +1,11 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
 html {
   overflow-x: clip;
   width: 100dvw;

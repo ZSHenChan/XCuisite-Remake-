@@ -2,7 +2,8 @@ import 'bootstrap';
 import 'regenerator-runtime/runtime';
 
 import animations from '../animations/defaultAnimations.js';
-import globalHeader from '../animations/globalHeader.js';
+import globalHeader from '../components/globalHeader.js';
+import globalFooter from '../components/globalFooter.js';
 
 import cart from '../components/cart.js';
 import * as model from '../model.js';
@@ -12,12 +13,18 @@ import { CURTAIN_FLYIN_DELAY } from '../config.js';
 
 export default class Controller {
   constructor() {
+    globalHeader.addHandlerNavCurtain(this._controlNavFlyin);
     globalHeader.addHandlerCurtain(
       this._controlCurtainFlyout,
       this._controlCurtainFlyin
     );
     globalHeader.addHandlerEmptyCart(this._controlEmptyCart);
+    globalFooter.addHandlerExpandSection();
   }
+
+  _controlNavFlyin = function () {
+    globalHeader.navFlyin();
+  };
 
   _controlCurtainFlyout = function () {
     cart.render(model.state.cart.items);
