@@ -39,7 +39,7 @@ export default class Component {
   }
 
   _generateMarkups() {
-    return this._data.map(dt => this._generateMarkupReview(dt)).join('');
+    return this._data.map(dt => this._generateMarkup(dt)).join('');
   }
 
   _generateMarkup(data) {

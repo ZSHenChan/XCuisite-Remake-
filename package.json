@@ -18,6 +18,7 @@
   "dependencies": {
     "bootstrap-icons": "^1.11.3",
     "core-js": "^3.35.1",
+    "leaflet": "^1.9.4",
     "regenerator": "^0.14.12"
   },
   "staticFiles": {

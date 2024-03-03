@@ -3,4 +3,13 @@
   border: none;
   text-align: center;
   font-weight: bold;
+  padding: 0.7rem 3rem;
+  color: $secondary-light;
+  font-size: $font-md;
+  letter-spacing: 0.1rem;
+
+  &:hover,
+  &:active {
+    color: $secondary;
+  }
 }

@@ -116,6 +116,86 @@ const product12 = {
   ingredients: 'sugar',
 };
 
+const store1 = {
+  storeName: 'Paragon Shopping Centre',
+  street: '290 Orchard Rd',
+  address: 'Singapore 238859',
+  tel: '23456789',
+  operateTime: '10:00AM - 9:00PM Daily',
+  coords: [1.30403, 103.83605],
+};
+const store2 = {
+  storeName: 'Guoco Tower',
+  street: '1 Wallich St',
+  address: 'Singapore 078881',
+  tel: '23458790',
+  operateTime: '10:00AM - 9:00PM Daily',
+  coords: [1.2770566482056793, 103.84585313414046],
+};
+const store3 = {
+  storeName: 'Bugis+',
+  street: '201 Victoria St',
+  address: 'Singapore 188067',
+  tel: '23458901',
+  operateTime: '10:00AM - 9:00PM Daily',
+  coords: [1.2997336007222613, 103.854226647566],
+};
+const store4 = {
+  storeName: 'Jurong Point',
+  street: '1 Jurong West Central 2',
+  address: 'Singapore 648886',
+  tel: '23451098',
+  operateTime: '10:00AM - 9:00PM Daily',
+  coords: [1.3407739649436974, 103.70694421914453],
+};
+const store5 = {
+  storeName: 'Tiong Bahru Plaza',
+  street: '302 Tiong Bahru Rd',
+  address: 'Singapore 168732',
+  tel: '234558790',
+  operateTime: '10:00AM - 9:00PM Daily',
+  coords: [1.2868035571831067, 103.82717517005327],
+};
+const store6 = {
+  storeName: 'The Shoppes at Marina Bay Sands',
+  street: '8 Bayfront Ave',
+  address: 'Singapore 018955',
+  tel: '23451579',
+  operateTime: '10:00AM - 9:00PM Daily',
+  coords: [1.2843686280505875, 103.85958489514043],
+};
+const store7 = {
+  storeName: 'Sentosa',
+  street: '26 Sentosa Gateway',
+  address: 'The Forum 098138',
+  tel: '23450021',
+  operateTime: '10:00AM - 9:00PM Daily',
+  coords: [1.2550589944561685, 103.82169877838415],
+};
+const store8 = {
+  storeName: 'Gain City',
+  street: '8 Ang Mo Kio',
+  address: 'Singapore 569500',
+  tel: '23458890',
+  operateTime: '10:00AM - 9:00PM Daily',
+  coords: [1.3722806631395434, 103.86485276934508],
+};
+
+export const stores = [
+  store1,
+  store2,
+  store3,
+  store4,
+  store5,
+  store6,
+  store7,
+  store8,
+];
+
+export const filterStoreByName = function (storeName) {
+  return stores.filter(store => store.storeName === storeName);
+};
+
 export const products = [
   product0,
   product1,

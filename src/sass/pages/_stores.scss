@@ -1,0 +1,47 @@
+.stores-main {
+  padding: 10dvh 5rem;
+
+  .find-stores {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: #fff;
+    min-height: 50dvh;
+
+    border-radius: 2rem;
+    overflow: hidden;
+  }
+
+  #map {
+    z-index: 1;
+    min-height: 30dvh;
+  }
+
+  .find {
+    padding: 3dvw;
+
+    &__label {
+      display: block;
+      font-size: $font-lg;
+      margin-bottom: $spacing * 0.5;
+    }
+    &__select {
+      display: block;
+      font-size: $font-md;
+      padding: 0 1rem;
+    }
+
+    &__result {
+      font-size: $font-md;
+      line-height: 1.7;
+    }
+  }
+
+  @include respond(tab-port) {
+    padding: 10dvh 1dvw;
+
+    .find-stores {
+      grid-template-columns: 1fr;
+      grid-template-rows: min-content, 30dvh;
+    }
+  }
+}
