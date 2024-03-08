@@ -37,7 +37,7 @@
           />
         </a>
         <ul class="navbar-nav navbar-nav--right">
-          <li id="cart-icon">
+          <li>
             <svg class="icon icon-gift" id="cart-icon">
               <use xlink:href="../src/images/sprite.svg#icon-gift"></use>
             </svg>
@@ -106,18 +106,13 @@
     </main>
 
     <footer class="globalfooter text-secondary bg-primary">
-      <div class="globalfooter-content px-5 pt-5">
-        <nav class="globalfooter-directory row row-cols-1 row-cols-md-3 mb-5">
-          <div class="globalfooter-column col">
+      <div class="globalfooter__wrapper">
+        <nav class="globalfooter__nav">
+          <div class="globalfooter-column">
             <div class="globalfooter-column-section">
               <h3 class="globalfooter-column-section-title">
-                <span class="globalfooter-column-section-title-text"
-                  >Stores</span
-                >
-                <button
-                  id="globalfooterColumnSectionButton-Stores"
-                  class="globalfooter-column-section-title-text-button btn btn-primary text-secondary px-0"
-                >
+                <span class="globalfooter-column-section-text">Stores</span>
+                <button class="btn globalfooter-column-section-button">
                   <span>Stores</span>
                   <span
                     ><svg class="footer__expand-btn">
@@ -129,17 +124,17 @@
                 </button>
               </h3>
               <div class="globalfooter-column-section-list-wrapper">
-                <ul class="globalfooter-column-section-list">
-                  <li class="globalfooter-column-section-item">
+                <ul class="globalfooter-column-section-list" role="list">
+                  <li class="globalfooter-column-section-item" role="listitem">
                     <a href="./stores.html">Singapore</a>
                   </li>
-                  <li class="globalfooter-column-section-item">
+                  <li class="globalfooter-column-section-item" role="listitem">
                     <a href="#">Malaysia</a>
                   </li>
-                  <li class="globalfooter-column-section-item">
+                  <li class="globalfooter-column-section-item" role="listitem">
                     <a href="#">Indonesia</a>
                   </li>
-                  <li class="globalfooter-column-section-item">
+                  <li class="globalfooter-column-section-item" role="listitem">
                     <a href="#">Thailand</a>
                   </li>
                 </ul>
@@ -147,12 +142,10 @@
             </div>
             <div class="globalfooter-column-section">
               <h3 class="globalfooter-column-section-title">
-                <span class="globalfooter-column-section-title-text"
-                  >About Us</span
-                >
+                <span class="globalfooter-column-section-text">About Us</span>
                 <button
                   id="globalfooterColumnSectionButton-About-Us"
-                  class="globalfooter-column-section-title-text-button btn btn-primary text-secondary px-0"
+                  class="btn globalfooter-column-section-button"
                 >
                   <span>About Us</span>
                   <span
@@ -165,17 +158,17 @@
                 </button>
               </h3>
               <div class="globalfooter-column-section-list-wrapper">
-                <ul class="globalfooter-column-section-list">
-                  <li class="globalfooter-column-section-item">
+                <ul class="globalfooter-column-section-list" role="list">
+                  <li class="globalfooter-column-section-item" role="listitem">
                     <a href="investors.html">Investors</a>
                   </li>
-                  <li class="globalfooter-column-section-item">
-                    <a href="events.html">Events</a>
+                  <li class="globalfooter-column-section-item" role="listitem">
+                    <a href="../index.html">Events</a>
                   </li>
-                  <li class="globalfooter-column-section-item">
-                    <a href="history.html">History</a>
+                  <li class="globalfooter-column-section-item" role="listitem">
+                    <a href="about.html">History</a>
                   </li>
-                  <li class="globalfooter-column-section-item">
+                  <li class="globalfooter-column-section-item" role="listitem">
                     <a href="contactUs.html">Contact Us</a>
                   </li>
                 </ul>
@@ -183,15 +176,13 @@
             </div>
           </div>
 
-          <div class="globalfooter-column col">
+          <div class="globalfooter-column">
             <div class="globalfooter-column-section">
               <h3 class="globalfooter-column-section-title">
-                <span class="globalfooter-column-section-title-text"
-                  >Account</span
-                >
+                <span class="globalfooter-column-section-text">Account</span>
                 <button
                   id="globalfooterColumnSectionButton-Shops"
-                  class="globalfooter-column-section-title-text-button btn btn-primary text-secondary px-0"
+                  class="btn globalfooter-column-section-button"
                 >
                   <span>Account</span>
                   <span
@@ -204,17 +195,17 @@
                 </button>
               </h3>
               <div class="globalfooter-column-section-list-wrapper">
-                <ul class="globalfooter-column-section-list">
-                  <li class="globalfooter-column-section-item">
+                <ul class="globalfooter-column-section-list" role="list">
+                  <li class="globalfooter-column-section-item" role="listitem">
                     <a href="#">Create Account</a>
                   </li>
-                  <li class="globalfooter-column-section-item">
+                  <li class="globalfooter-column-section-item" role="listitem">
                     <a href="#">Sign In</a>
                   </li>
-                  <li class="globalfooter-column-section-item">
+                  <li class="globalfooter-column-section-item" role="listitem">
                     <a href="#">iOS App</a>
                   </li>
-                  <li class="globalfooter-column-section-item">
+                  <li class="globalfooter-column-section-item" role="listitem">
                     <a href="#">Android App</a>
                   </li>
                 </ul>
@@ -222,12 +213,10 @@
             </div>
             <div class="globalfooter-column-section">
               <h3 class="globalfooter-column-section-title">
-                <span class="globalfooter-column-section-title-text"
-                  >Company</span
-                >
+                <span class="globalfooter-column-section-text">Company</span>
                 <button
                   id="globalfooterColumnSectionButton-Shops2"
-                  class="globalfooter-column-section-title-text-button btn btn-primary text-secondary px-0"
+                  class="btn globalfooter-column-section-button"
                 >
                   <span>Company</span>
                   <span
@@ -240,11 +229,11 @@
                 </button>
               </h3>
               <div class="globalfooter-column-section-list-wrapper">
-                <ul class="globalfooter-column-section-list">
-                  <li class="globalfooter-column-section-item">
+                <ul class="globalfooter-column-section-list" role="list">
+                  <li class="globalfooter-column-section-item" role="listitem">
                     <a href="#">For Business</a>
                   </li>
-                  <li class="globalfooter-column-section-item">
+                  <li class="globalfooter-column-section-item" role="listitem">
                     <a href="joinUs.html">Join Us</a>
                   </li>
                 </ul>
@@ -252,12 +241,10 @@
             </div>
             <div class="globalfooter-column-section">
               <h3 class="globalfooter-column-section-title">
-                <span class="globalfooter-column-section-title-text"
-                  >Resources</span
-                >
+                <span class="globalfooter-column-section-text">Resources</span>
                 <button
                   id="globalfooterColumnSectionButton-Shops3"
-                  class="globalfooter-column-section-title-text-button btn btn-primary text-secondary px-0"
+                  class="btn globalfooter-column-section-button"
                 >
                   <span>Resources</span>
                   <span
@@ -270,28 +257,26 @@
                 </button>
               </h3>
               <div class="globalfooter-column-section-list-wrapper">
-                <ul class="globalfooter-column-section-list">
-                  <li class="globalfooter-column-section-item">
-                    <a href="offers.html">Offers</a>
+                <ul class="globalfooter-column-section-list" role="list">
+                  <li class="globalfooter-column-section-item" role="listitem">
+                    <a href="./offers.html">Offers</a>
                   </li>
-                  <li class="globalfooter-column-section-item">
+                  <li class="globalfooter-column-section-item" role="listitem">
                     <a href="#">Privacy & Terms</a>
                   </li>
                 </ul>
               </div>
             </div>
           </div>
-          <div class="globalfooter-column col">
+          <div class="globalfooter-column">
             <div class="globalfooter-column-section">
               <h3 class="globalfooter-column-section-title">
-                <span class="globalfooter-column-section-title-text"
-                  >Shops</span
-                >
+                <span class="globalfooter-column-section-text">Shops</span>
                 <button
                   id="globalfooterColumnSectionButton-Shops4"
-                  class="globalfooter-column-section-title-text-button btn btn-primary text-secondary px-0"
+                  class="btn globalfooter-column-section-button"
                 >
-                  <span>Shops</span>
+                  <span>Shop</span>
                   <span
                     ><svg class="footer__expand-btn">
                       <use
@@ -302,38 +287,38 @@
                 </button>
               </h3>
               <div class="globalfooter-column-section-list-wrapper">
-                <ul class="globalfooter-column-section-list">
-                  <li class="globalfooter-column-section-item">
+                <ul class="globalfooter-column-section-list" role="list">
+                  <li class="globalfooter-column-section-item" role="listitem">
                     <a href="#">BestSeller</a>
                   </li>
-                  <li class="globalfooter-column-section-item">
+                  <li class="globalfooter-column-section-item" role="listitem">
                     <a href="#">New Arrival</a>
                   </li>
-                  <li class="globalfooter-column-section-item">
+                  <li class="globalfooter-column-section-item" role="listitem">
                     <a href="#">Ring</a>
                   </li>
-                  <li class="globalfooter-column-section-item">
+                  <li class="globalfooter-column-section-item" role="listitem">
                     <a href="#">Shell</a>
                   </li>
-                  <li class="globalfooter-column-section-item">
+                  <li class="globalfooter-column-section-item" role="listitem">
                     <a href="#">Cake</a>
                   </li>
-                  <li class="globalfooter-column-section-item">
+                  <li class="globalfooter-column-section-item" role="listitem">
                     <a href="#">Classic</a>
                   </li>
-                  <li class="globalfooter-column-section-item">
+                  <li class="globalfooter-column-section-item" role="listitem">
                     <a href="#">Chocolate</a>
                   </li>
-                  <li class="globalfooter-column-section-item">
+                  <li class="globalfooter-column-section-item" role="listitem">
                     <a href="#">Strawberry</a>
                   </li>
-                  <li class="globalfooter-column-section-item">
+                  <li class="globalfooter-column-section-item" role="listitem">
                     <a href="#">Milk</a>
                   </li>
-                  <li class="globalfooter-column-section-item">
+                  <li class="globalfooter-column-section-item" role="listitem">
                     <a href="#">Glazed</a>
                   </li>
-                  <li class="globalfooter-column-section-item">
+                  <li class="globalfooter-column-section-item" role="listitem">
                     <a href="#">Powdered</a>
                   </li>
                 </ul>
@@ -346,7 +331,7 @@
         >
           <p class="mt-2">
             Check out our stores:&nbsp;<span
-              ><a href="#" class="">Find a store</a></span
+              ><a href="stores.html">Find a store</a></span
             >
             or call 012-345-6789
           </p>
