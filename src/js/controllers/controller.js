@@ -1,4 +1,3 @@
-import 'bootstrap';
 import 'regenerator-runtime/runtime';
 
 import animations from '../animations/defaultAnimations.js';

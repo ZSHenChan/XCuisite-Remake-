@@ -42,8 +42,11 @@
           />
         </a>
         <ul class="navbar-nav navbar-nav--right">
-          <li id="cart-icon">
-            <i class="bi bi-gift nav-link"></i><span id="cart-qty">&nbsp;</span>
+          <li>
+            <svg class="icon icon-gift" id="cart-icon">
+              <use xlink:href="./src/images/sprite.svg#icon-gift"></use>
+            </svg>
+            <span id="cart-qty">&nbsp;</span>
           </li>
           <div for="navbar-nav-checkbox" class="navbar-nav-btn">
             <div class="navbar-nav-icon"></div>
@@ -119,6 +122,8 @@
           />
           <video
             id="video-desktop"
+            srcset="./src/videos/intro-video-mobile.mp4 50em, ./src/videos/intro-video-desktop.mp4 120em"
+            sizes="(max-width:50em) 100dvw, (max-width:120em) 100dvw"
             src="./src/videos/intro-video-desktop.mp4"
             type="video/mp4"
             class="intro-video"
@@ -382,7 +387,13 @@
                 class="globalfooter-column-section-title-text-button btn btn-primary text-secondary px-0"
               >
                 <span>Stores</span>
-                <span><i class="bi bi-arrows-angle-expand"></i></span>
+                <span
+                  ><svg class="footer__expand-btn">
+                    <use
+                      xlink:href="./src/images/sprite.svg#icon-chevron-left"
+                    ></use>
+                  </svg>
+                </span>
               </button>
             </h3>
             <div class="globalfooter-column-section-list-wrapper">
@@ -412,7 +423,13 @@
                 class="globalfooter-column-section-title-text-button btn btn-primary text-secondary px-0"
               >
                 <span>About Us</span>
-                <span><i class="bi bi-arrows-angle-expand"></i></span>
+                <span
+                  ><svg class="footer__expand-btn">
+                    <use
+                      xlink:href="./src/images/sprite.svg#icon-chevron-left"
+                    ></use>
+                  </svg>
+                </span>
               </button>
             </h3>
             <div class="globalfooter-column-section-list-wrapper">
@@ -445,7 +462,13 @@
                 class="globalfooter-column-section-title-text-button btn btn-primary text-secondary px-0"
               >
                 <span>Account</span>
-                <span><i class="bi bi-arrows-angle-expand"></i></span>
+                <span
+                  ><svg class="footer__expand-btn">
+                    <use
+                      xlink:href="./src/images/sprite.svg#icon-chevron-left"
+                    ></use>
+                  </svg>
+                </span>
               </button>
             </h3>
             <div class="globalfooter-column-section-list-wrapper">
@@ -475,7 +498,13 @@
                 class="globalfooter-column-section-title-text-button btn btn-primary text-secondary px-0"
               >
                 <span>Company</span>
-                <span><i class="bi bi-arrows-angle-expand"></i></span>
+                <span
+                  ><svg class="footer__expand-btn">
+                    <use
+                      xlink:href="./src/images/sprite.svg#icon-chevron-left"
+                    ></use>
+                  </svg>
+                </span>
               </button>
             </h3>
             <div class="globalfooter-column-section-list-wrapper">
@@ -499,7 +528,13 @@
                 class="globalfooter-column-section-title-text-button btn btn-primary text-secondary px-0"
               >
                 <span>Resources</span>
-                <span><i class="bi bi-arrows-angle-expand"></i></span>
+                <span
+                  ><svg class="footer__expand-btn">
+                    <use
+                      xlink:href="./src/images/sprite.svg#icon-chevron-left"
+                    ></use>
+                  </svg>
+                </span>
               </button>
             </h3>
             <div class="globalfooter-column-section-list-wrapper">
@@ -523,7 +558,13 @@
                 class="globalfooter-column-section-title-text-button btn btn-primary text-secondary px-0"
               >
                 <span>Shop</span>
-                <span><i class="bi bi-arrows-angle-expand"></i></span>
+                <span
+                  ><svg class="footer__expand-btn">
+                    <use
+                      xlink:href="./src/images/sprite.svg#icon-chevron-left"
+                    ></use>
+                  </svg>
+                </span>
               </button>
             </h3>
             <div class="globalfooter-column-section-list-wrapper">

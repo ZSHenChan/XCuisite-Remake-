@@ -1,4 +1,3 @@
-import 'bootstrap';
 // import 'regenerator-runtime/runtime';
 
 import gridAnimations from '../animations/gridAnimations.js';

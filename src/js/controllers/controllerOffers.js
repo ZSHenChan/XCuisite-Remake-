@@ -1,6 +1,5 @@
 import Controller from './controller.js';
 
-import 'bootstrap';
 import 'regenerator-runtime/runtime';
 
 import * as model from '../model.js';

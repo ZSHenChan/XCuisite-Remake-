@@ -130,6 +130,11 @@
         cursor: pointer;
         position: relative;
         display: block;
+
+        width: 16px;
+        height: 16px;
+        fill: $white-opaque;
+        stroke-width: 0;
       }
 
       #cart-qty {
