@@ -128,7 +128,6 @@
 
       .icon-gift {
         cursor: pointer;
-        position: relative;
         display: block;
 
         width: 16px;
@@ -137,16 +136,18 @@
         stroke-width: 0;
       }
 
+      #cart-icon {
+        position: relative;
+      }
+
       #cart-qty {
         position: absolute;
-        bottom: 3px;
+        bottom: -2px;
         right: -6px;
         background-color: transparent;
         width: 1rem;
         height: 1rem;
-        border-radius: 50%;
         text-align: center;
-        line-height: 90%;
         color: $secondary;
         font-weight: bold;
       }
