@@ -15,7 +15,11 @@
     @extend %default-section-padding;
     text-align: center;
 
-    &-details {
+    &__heading {
+      color: $primary;
+    }
+
+    &__details {
       font-size: $font-md;
     }
 
@@ -65,11 +69,10 @@
       @include respond(phone) {
         margin-bottom: 6dvw;
       }
-
       &-name {
         font-size: $font-md;
       }
-      &-qty {
+      &-price {
         justify-self: end;
         font-weight: bold;
         font-size: $font-lg;
@@ -85,6 +88,7 @@
     display: flex;
     flex-direction: column;
     align-items: end;
+    font-size: $font-lg;
 
     .summary {
       min-width: 20rem;
@@ -101,7 +105,7 @@
     }
 
     .total-checkout__grand {
-      font-size: $font-lg;
+      font-size: $font-lg + 0.3rem;
       font-weight: bold;
     }
     .grand-total {
@@ -111,13 +115,13 @@
       font-weight: bold;
       font-size: $font-md;
       &__amount {
-        font-size: $font-xl;
+        font-size: $font-xl - 0.5rem;
       }
     }
   }
 
   .btn-checkout-payment {
-    padding: 1rem 3rem;
+    // padding: 1rem 3rem;
     font-size: $font-lg;
     color: $secondary-light;
 

@@ -52,6 +52,7 @@
 
       a {
         text-decoration: none;
+        z-index: 2;
       }
       @media (max-width: $md) {
         margin-top: -100%;

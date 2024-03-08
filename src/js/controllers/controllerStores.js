@@ -9,6 +9,7 @@ import viewStoreResult from '../components/viewStoreResult.js';
 class ControllerStores extends Controller {
   constructor() {
     super();
+    this.init();
     viewStores.init(model.stores);
     viewStoreResult.addHandlerStoreResult(this._controlStoreResult);
   }

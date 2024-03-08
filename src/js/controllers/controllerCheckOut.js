@@ -9,11 +9,14 @@ class ControllerCheckOut extends Controller {
   constructor() {
     super();
     this._initCheckOut();
-    this._init();
+    this.init();
   }
 
   _initCheckOut() {
     viewCheckOut.render(model.state.cart.items);
+    viewCheckOut._calcGrandTotalAmount();
+    viewCheckOut._renderTotalAmount();
+    viewCheckOut._renderMinFreeShipping();
   }
 }
 

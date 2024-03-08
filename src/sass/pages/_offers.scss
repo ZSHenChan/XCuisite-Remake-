@@ -74,19 +74,9 @@
     }
     &-btn {
       display: block;
-      border: none;
-      outline: none;
-      background-color: $primary;
-      color: $secondary;
       padding: 0.8rem 3rem;
-      border-radius: 1rem;
       align-self: center;
-      font-weight: bold;
-      font-size: 1.4rem;
-
-      &:hover {
-        background-color: #f8731b;
-      }
+      font-size: $font-lg;
     }
   }
   .hidden {

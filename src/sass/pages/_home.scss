@@ -231,12 +231,12 @@
         grid-column: 5 / span 3;
         grid-row: 4 / span 2;
         position: relative;
-        top: -55dvh;
-        left: 55dvw;
+        top: -10dvh;
+        left: 15dvw;
         transition: all 3s ease-in-out;
         transition-delay: 0.5s;
         &.show {
-          transform: translate(-55dvw, 55dvh);
+          transform: translate(-15dvw, 10dvh);
         }
       }
       &--10 {

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>XCuisite - About</title>
+    <title>About - XCuisite</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -85,144 +85,55 @@
     </header>
 
     <main class="bg-secondary rounded-3 text-center p-0">
-      <section class="about-banner">
-        <div class="about-intro-text p-5">
-          <h1 class="about-intro-heading">About Us</h1>
-          <p class="about-intro-description">
-            Welcome to XCuisite, your ultimate destination for delectable
-            doughnuts! At XCuisite, we believe that every bite should be an
-            exquisite experience, and our passion for crafting the finest
-            doughnuts is evident in every delicious creation we offer.
-          </p>
-        </div>
-      </section>
+      <div class="banner">
+        <figure class="banner__img__container">
+          <img
+            srcset="
+              /src/images/about/about-us-banner-mobile.jpeg   600w,
+              /src/images/about/about-us-banner-desktop.jpeg 1200w
+            "
+            sizes="(max-width:37.5em) 100dvw, (max-width:75em) 100dvw"
+            alt="About Us Banner"
+            class="img-fluid rounded-top-3 banner__img"
+            src="/src/images/about/about-us-banner-desktop.jpeg"
+          />
+        </figure>
+      </div>
+      <h1 class="h-1 mt-5 mb-sm">About Us</h1>
+      <h2 class="h-2 mb-sm">Meet our founders</h2>
 
-      <section class="about-main">
-        <div class="default-wrapper about-main-wrapper">
-          <div class="about-main-block row row-cols-2">
-            <div class="col-5 about-main-blockImg">
+      <section class="section-founder">
+        <div class="section-founder__wrapper">
+          <div class="wrapper__top">
+            &nbsp;
+            <figure class="img__container img__container--founder">
               <img
-                src="../src/images/about/alice-pasqual-1qubXlkKnSM-unsplash.jpg"
-                alt=""
-                class="default-img"
+                srcset="/src/images/about/founder.webp"
+                sizes="(max-width:37.5em) 100dvw, (max-width:75em) 100dvw"
+                alt="About Us Banner"
+                class="img-fluid"
+                src="/src/images/about/founder.webp"
               />
-            </div>
-            <div class="col-7 about-main-blockContent">
-              <p class="about-main-blockContent-heading">Our Story</p>
-              <p class="about-main-blockContent-description">
-                XCuisite was founded with one simple goal in mind: to bring joy
-                to people's lives through the art of doughnuts. Our journey
-                began in a small kitchen with a big dream. With a team of
-                passionate bakers and a commitment to using only the finest
-                ingredients, we set out to create doughnuts that would tantalize
-                taste buds and leave a lasting impression.
-              </p>
-            </div>
-          </div>
-          <div class="about-main-block row row-cols-2">
-            <div class="col-5 about-main-blockImg">
+              <source srcset="/src/images/about/founder.jpeg" />
+            </figure>
+            <figure class="img__container img__container--cofounder">
               <img
-                src="../src/images/about/alice-pasqual-1qubXlkKnSM-unsplash.jpg"
-                alt=""
-                class="default-img"
+                srcset="/src/images/about/co-founder.webp"
+                sizes="(max-width:37.5em) 100dvw, (max-width:75em) 100dvw"
+                alt="About Us Banner"
+                class="img-fluid"
+                src="/src/images/about/co-founder.webp"
               />
-            </div>
-            <div class="col-7 about-main-blockContent">
-              <p class="about-main-blockContent-heading">
-                Quality and Craftsmanship
-              </p>
-              <p class="about-main-blockContent-description">
-                At XCuisite, we take great pride in our craftsmanship. Each
-                doughnut is meticulously handcrafted with love and attention to
-                detail. From the moment the dough is mixed to the final touch of
-                glaze, our bakers pour their heart and soul into every batch. We
-                carefully source the highest quality ingredients, ensuring that
-                each bite is a burst of flavor and indulgence.
-              </p>
-            </div>
+              <source srcset="/src/images/about/founder.jpeg" />
+            </figure>
           </div>
-          <div class="about-main-block row row-cols-2">
-            <div class="col-5 about-main-blockImg">
-              <img
-                src="../src/images/about/alice-pasqual-1qubXlkKnSM-unsplash.jpg"
-                alt=""
-                class="default-img"
-              />
-            </div>
-            <div class="col-7 about-main-blockContent">
-              <p class="about-main-blockContent-heading">
-                Variety and Innovation
-              </p>
-              <p class="about-main-blockContent-description">
-                Variety is the spice of life, and we believe in offering a wide
-                range of flavors and styles to suit every palate. From classic
-                favorites like glazed and chocolate to more adventurous
-                creations like matcha and salted caramel, there's a doughnut to
-                satisfy every craving. We also love to push the boundaries of
-                traditional doughnuts, constantly experimenting with new flavors
-                and techniques to bring you exciting and innovative treats.
-              </p>
-            </div>
-          </div>
-          <div class="about-main-block row row-cols-2">
-            <div class="col-5 about-main-blockImg">
-              <img
-                src="../src/images/about/alice-pasqual-1qubXlkKnSM-unsplash.jpg"
-                alt=""
-                class="default-img"
-              />
-            </div>
-            <div class="col-7 about-main-blockContent">
-              <p class="about-main-blockContent-heading">
-                Community and Connection
-              </p>
-              <p class="about-main-blockContent-description">
-                We believe that food has the power to bring people together.
-                Whether it's a morning pick-me-up, an afternoon treat, or a
-                special celebration, our doughnuts are meant to be shared and
-                enjoyed with loved ones. We strive to foster a sense of
-                community by creating a warm and inviting atmosphere in our
-                stores, where customers can connect over their shared love of
-                doughnuts.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section-founder default-wrapper">
-        <div class="section-founder-wrapper">
-          <div class="founder">
-            <span class="founder__name">Emily</span>
-            <div class="founder__img-box">
-              <picture
-                ><source srcset="../src/images/about/founder.webp" />
-                <img
-                  src="../src/images/about/founder.jpeg"
-                  alt="founder image"
-                  class="founder__img default-img-round"
-              /></picture>
-            </div>
-            <span class="founder__name">Johnson</span>
-          </div>
-          <h3 class="founder__meet">meet the founder</h3>
-          <div class="founder__details">
-            <div class="founder__details__img-box">
-              <img
-                src="../src/images/about/founder-2.jpg"
-                alt="founder image"
-                class="founder__img default-img"
-              />
-            </div>
-            <p class="founder__details__description">
-              With a deep love for baking and a passion for pushing boundaries,
-              Emily has created a range of innovative doughnut flavors that have
-              captivated the culinary world. Emily's commitment to using
-              high-quality, locally sourced ingredients and supporting
-              sustainability initiatives sets XCuisite apart. She actively gives
-              back to the community by donating to local charities and promoting
-              food security and education.
-            </p>
+          <div class="wrapper__bottom">
+            <h3 class="h-3 mb-sm">
+              the most delicious doughnuts are those baked with love
+            </h3>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
+            quisquam delectus ipsum deleniti id. Dolores quam saepe, excepturi
+            error hic esse ips
           </div>
         </div>
       </section>
@@ -248,7 +159,7 @@
               <div class="globalfooter-column-section-list-wrapper">
                 <ul class="globalfooter-column-section-list">
                   <li class="globalfooter-column-section-item">
-                    <a href="#">Singapore</a>
+                    <a href="./stores.html">Singapore</a>
                   </li>
                   <li class="globalfooter-column-section-item">
                     <a href="#">Malaysia</a>
@@ -284,7 +195,7 @@
                     <a href="events.html">Events</a>
                   </li>
                   <li class="globalfooter-column-section-item">
-                    <a href="#">History</a>
+                    <a href="history.html">History</a>
                   </li>
                   <li class="globalfooter-column-section-item">
                     <a href="contactUs.html">Contact Us</a>
@@ -365,7 +276,7 @@
               <div class="globalfooter-column-section-list-wrapper">
                 <ul class="globalfooter-column-section-list">
                   <li class="globalfooter-column-section-item">
-                    <a href="./offers.html">Offers</a>
+                    <a href="offers.html">Offers</a>
                   </li>
                   <li class="globalfooter-column-section-item">
                     <a href="#">Privacy & Terms</a>

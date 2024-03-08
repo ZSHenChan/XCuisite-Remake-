@@ -1,8 +1,6 @@
-import * as model from '../model.js';
+import { CURRENCY } from '../config.js';
 import Component from './component.js';
 import image from '../../images/products/banana.jpg';
-
-import * as model from '../model.js';
 
 class Offers extends Component {
   _data;
@@ -27,10 +25,11 @@ class Offers extends Component {
                   class="card-image-top rounded-top-5"
                 />
                 <div class="card-body justify-content-center">
-                  <p class="card-title">${product.productName}</p>
-                  <p class="card-text">${product.description}</p>
-                  <div class="cta-links mt-4">
-                    <a class="icon-link" onclick="">
+                  <p class="card-title mb-xs">${product.productName}</p>
+                  <p class="card-text mb-xs">${product.description}</p>
+                  <strong class="card-price mb-sm">${CURRENCY}${product.price}</strong>
+                  <div class="cta-links">
+                    <a class="icon-link">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="16"
@@ -45,7 +44,7 @@ class Offers extends Component {
                       </svg>
                       Ingredients
                     </a>
-                    <button class="btn btn-primary text-secondary">
+                    <button class="btn btn-primary text-secondary card-btn">
                       Add to cart
                     </button>
                   </div>

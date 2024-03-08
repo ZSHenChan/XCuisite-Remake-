@@ -3,7 +3,7 @@ import Controller from './controller';
 class DefaultController extends Controller {
   constructor() {
     super();
-    this._init();
+    this.init();
   }
 }
 

@@ -13,7 +13,7 @@ class ControllerIndex extends Controller {
   constructor() {
     super();
     this._initIndex();
-    this._init();
+    this.init();
     introVideo.addHandlerIntoCtaBtn();
   }
 

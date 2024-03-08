@@ -35,11 +35,14 @@
   &-title {
     font-size: $font-lg;
     color: $primary;
-    user-select: none;
   }
 
   &-text {
     font-size: $font-sm;
+  }
+
+  &-price {
+    display: block;
   }
 
   .cta-links {
@@ -49,6 +52,11 @@
     .icon-link {
       cursor: pointer;
     }
+  }
+
+  .btn {
+    padding: $spacing * 0.5 $spacing;
+    font-size: $font-sm;
   }
 
   @media only screen and (width<= $bp-phone), only screen and (hover: none) {

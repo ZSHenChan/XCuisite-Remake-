@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>XCuisite - Offers</title>
+    <title>Offers - XCuisite</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -85,12 +85,19 @@
     </header>
 
     <main class="bg-secondary rounded-3 text-center p-0">
-      <div class="subpage-intro">
-        <img
-          class="img-fluid rounded-top-3"
-          src="/src/images/products/offers-hero.jpg"
-          alt="offers banner - a doughnut with colourful sprinkles"
-        />
+      <div class="banner">
+        <figure class="banner__img__container">
+          <img
+            srcset="
+              /src/images/about/offers-banner-mobile.jpeg   600w,
+              /src/images/about/offers-banner-desktop.jpeg 1200w
+            "
+            sizes="(max-width:37.5em) 100dvw, (max-width:75em) 100dvw"
+            alt="About Us Banner"
+            class="img-fluid rounded-top-3 banner__img"
+            src="/src/images/about/offers-banner-desktop.jpeg"
+          />
+        </figure>
       </div>
 
       <section class="offers rounded-3 text-center p-0">
@@ -146,7 +153,7 @@
               <div class="globalfooter-column-section-list-wrapper">
                 <ul class="globalfooter-column-section-list">
                   <li class="globalfooter-column-section-item">
-                    <a href="#">Singapore</a>
+                    <a href="./stores.html">Singapore</a>
                   </li>
                   <li class="globalfooter-column-section-item">
                     <a href="#">Malaysia</a>

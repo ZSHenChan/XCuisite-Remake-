@@ -1,112 +1,58 @@
-.about-banner {
-  background-image: linear-gradient(
-      (to right bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.7))
-    ),
-    url('../images/about/about-banner.jpg');
-  background-size: cover;
-  background-position: center;
-  height: 500px;
-  width: 100dvw;
+.section-founder {
+  padding: 10dvh 5rem;
+  display: grid;
+  place-items: center;
   position: relative;
 
-  .about-intro-text {
-    width: 70%;
-    color: $tertiary;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate((-50%, -50%));
-    .about-intro-heading {
-      font-size: 4rem;
-      font-weight: bold;
-      letter-spacing: 0.2rem;
-      margin-bottom: 2rem;
-    }
-    .about-intro-description {
-      font-size: 1.2rem;
-    }
-  }
-}
-
-.about-main {
-  .about-main-wrapper {
-    padding: 12rem 7rem 0rem;
-    .about-main-block {
-      padding-bottom: 6rem;
-      justify-content: space-between;
-      margin-bottom: 6rem;
-      &:nth-child(odd) {
-        flex-direction: row-reverse;
-      }
-      &:not(:last-child) {
-        border-bottom: 3px $primary double;
-      }
-
-      .about-main-blockImg {
-        margin: auto;
-      }
-      .about-main-blockContent {
-        margin-top: 0.5rem;
-        padding: 0 4rem;
-        .about-main-blockContent-heading {
-          color: $primary;
-          text-transform: uppercase;
-          letter-spacing: 0.3rem;
-          font-size: 2.8rem;
-          margin-bottom: 2rem;
-        }
-        .about-main-blockContent-description {
-          color: $tertiary;
-          font-size: 1.15rem;
-          letter-spacing: 0.04rem;
-          max-width: 55ch;
-          margin: auto;
-        }
-      }
-    }
-  }
-}
-
-.section-founder {
-  .section-founder-wrapper {
-    padding: 5rem 0;
-    background-color: #fff;
-
-    border-radius: 1rem;
-  }
-  .founder {
-    color: $tertiary;
+  &__wrapper {
+    min-height: 50dvh;
+    height: 100%;
+    width: 80%;
+    max-width: 40rem;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
+    grid-template-rows: 25dvh max-content;
+    border-radius: 2rem;
+    box-shadow: $shadow-light;
+    overflow: hidden;
 
-    margin-bottom: 3rem;
+    .wrapper {
+      &__top {
+        width: 100%;
+        height: 100%;
+        background-color: $primary-dark;
+        position: relative;
+      }
+      &__bottom {
+        padding: 10dvh 5rem 5rem;
 
-    &__name {
-      font-weight: bold;
-      font-size: 3rem;
-    }
-    &__img {
-      max-width: 300px;
-    }
-    &__img-box {
-    }
-    &__meet {
-      text-transform: uppercase;
-      letter-spacing: 0.2rem;
-      font-size: 2rem;
-      color: $primary;
+        .h-3 {
+          font-size: $font-lg;
 
-      margin-bottom: 3rem;
+          color: $tertiary;
+        }
+      }
     }
-    &__details {
-      font-size: 0.8rem;
-      line-height: 1.8;
+  }
 
-      padding: 0 5rem;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      align-items: center;
+  .img {
+    &__container {
+      @include absCentralise;
+      @include roundImg;
+      &--founder {
+        width: 40%;
+        max-width: 18rem;
+        border: solid 0.7rem $secondary;
+        top: 90%;
+        left: 60%;
+      }
+      &--cofounder {
+        width: 30%;
+        max-width: 14rem;
+        border: solid 0.5rem $secondary;
+        top: 95%;
+        left: 38%;
+        z-index: 2;
+      }
     }
   }
 }

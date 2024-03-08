@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - XCuisite</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="../src/sass/main.scss" rel="stylesheet" />
+
+    <link rel="icon" href="../src/images/logos/xcuisite-logo-64-bg.png" />
+    <link
+      rel="apple-touch-icon"
+      href="../src/images/logos/xcuisite-logo-192-bg.png"
+    />
+
+    <script
+      type="module"
+      src="../src/js/controllers/defaultController.js"
+    ></script>
+  </head>
+
+  <body class="bg-primary">
+    <header class="global-header">
+      <nav class="navbar navbar-dark sticky-top">
+        <a href="../index.html" class="navbar-menuback">
+          <img
+            src="../src/images/logos/xcuisite-logo-64.png"
+            alt="xcuisite logo"
+            class="navbar-menuback__logo"
+          />
+        </a>
+        <ul class="navbar-nav navbar-nav--right">
+          <li id="cart-icon">
+            <i class="bi bi-gift nav-link"></i><span id="cart-qty">&nbsp;</span>
+          </li>
+          <div for="navbar-nav-checkbox" class="navbar-nav-btn">
+            <div class="navbar-nav-icon"></div>
+          </div>
+          <div class="navbar-nav-background">&nbsp;</div>
+        </ul>
+
+        <ul class="navbar-nav navbar-nav--left">
+          <li class="navbar-item">
+            <a href="about.html" class="nav-link">About</a>
+          </li>
+          <li class="navbar-item">
+            <a href="offers.html" class="nav-link">Offers</a>
+          </li>
+          <li class="navbar-item">
+            <a href="stores.html" class="nav-link">Stores</a>
+          </li>
+          <li class="navbar-item">
+            <a href="contactUs.html" class="nav-link">Contact&nbsp;Us</a>
+          </li>
+          <li class="navbar-item">
+            <a href="joinUs.html" class="nav-link">Join&nbsp;Us</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="global-curtain" id="cart-curtain">
+        <div class="global-curtain-content">
+          <a class="check-out-btn btn btn-primary" href="./checkOut.html"
+            >Check Out <span class="check-out-arrow">&rarr;</span></a
+          >
+          <span class="d-flex justify-content-between align-items-center"
+            ><h3 class="cart-header">Your Items</h3>
+            <button
+              class="btn btn-secondary text-primary fw-bolder empty-cart-btn"
+            >
+              Empty Cart
+            </button></span
+          >
+          <span></span>
+          <div class="in-cart-wrapper"></div>
+        </div>
+      </div>
+      <div class="global-curtain-bottom" id="global-curtain-bottom"></div>
+    </header>
+
+    <main class="bg-secondary rounded-3 text-center p-0">
+      <div class="banner">
+        <figure class="banner__img__container">
+          <img
+            srcset="
+              /src/images/about/about-us-banner.jpeg  300w,
+              /src/images/about/about-us-banner.jpeg 1000w
+            "
+            sizes="(max-width:56.25em) 30dvw, (max-width:37.5em) 43dvw, 18.75em"
+            alt="Contact Us Banner"
+            class="img-fluid rounded-top-3 banner__img"
+            src="/src/images/about/about-us-banner.jpeg"
+          />
+        </figure>
+      </div>
+      <h1 class="h-1 mt-5">Contact Us</h1>
+    </main>
+
+    <footer class="globalfooter text-secondary bg-primary">
+      <div class="globalfooter-content px-5 pt-5">
+        <nav class="globalfooter-directory row row-cols-1 row-cols-md-3 mb-5">
+          <div class="globalfooter-column col">
+            <div class="globalfooter-column-section">
+              <h3 class="globalfooter-column-section-title">
+                <span class="globalfooter-column-section-title-text"
+                  >Stores</span
+                >
+                <button
+                  id="globalfooterColumnSectionButton-Stores"
+                  class="globalfooter-column-section-title-text-button btn btn-primary text-secondary px-0"
+                >
+                  <span>Stores</span>
+                  <span><i class="bi bi-arrows-angle-expand"></i></span>
+                </button>
+              </h3>
+              <div class="globalfooter-column-section-list-wrapper">
+                <ul class="globalfooter-column-section-list">
+                  <li class="globalfooter-column-section-item">
+                    <a href="./stores.html">Singapore</a>
+                  </li>
+                  <li class="globalfooter-column-section-item">
+                    <a href="#">Malaysia</a>
+                  </li>
+                  <li class="globalfooter-column-section-item">
+                    <a href="#">Indonesia</a>
+                  </li>
+                  <li class="globalfooter-column-section-item">
+                    <a href="#">Thailand</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="globalfooter-column-section">
+              <h3 class="globalfooter-column-section-title">
+                <span class="globalfooter-column-section-title-text"
+                  >About Us</span
+                >
+                <button
+                  id="globalfooterColumnSectionButton-About-Us"
+                  class="globalfooter-column-section-title-text-button btn btn-primary text-secondary px-0"
+                >
+                  <span>About Us</span>
+                  <span><i class="bi bi-arrows-angle-expand"></i></span>
+                </button>
+              </h3>
+              <div class="globalfooter-column-section-list-wrapper">
+                <ul class="globalfooter-column-section-list">
+                  <li class="globalfooter-column-section-item">
+                    <a href="investors.html">Investors</a>
+                  </li>
+                  <li class="globalfooter-column-section-item">
+                    <a href="events.html">Events</a>
+                  </li>
+                  <li class="globalfooter-column-section-item">
+                    <a href="history.html">History</a>
+                  </li>
+                  <li class="globalfooter-column-section-item">
+                    <a href="contactUs.html">Contact Us</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="globalfooter-column col">
+            <div class="globalfooter-column-section">
+              <h3 class="globalfooter-column-section-title">
+                <span class="globalfooter-column-section-title-text"
+                  >Account</span
+                >
+                <button
+                  id="globalfooterColumnSectionButton-Shops"
+                  class="globalfooter-column-section-title-text-button btn btn-primary text-secondary px-0"
+                >
+                  <span>Account</span>
+                  <span><i class="bi bi-arrows-angle-expand"></i></span>
+                </button>
+              </h3>
+              <div class="globalfooter-column-section-list-wrapper">
+                <ul class="globalfooter-column-section-list">
+                  <li class="globalfooter-column-section-item">
+                    <a href="#">Create Account</a>
+                  </li>
+                  <li class="globalfooter-column-section-item">
+                    <a href="#">Sign In</a>
+                  </li>
+                  <li class="globalfooter-column-section-item">
+                    <a href="#">iOS App</a>
+                  </li>
+                  <li class="globalfooter-column-section-item">
+                    <a href="#">Android App</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="globalfooter-column-section">
+              <h3 class="globalfooter-column-section-title">
+                <span class="globalfooter-column-section-title-text"
+                  >Company</span
+                >
+                <button
+                  id="globalfooterColumnSectionButton-Shops2"
+                  class="globalfooter-column-section-title-text-button btn btn-primary text-secondary px-0"
+                >
+                  <span>Company</span>
+                  <span><i class="bi bi-arrows-angle-expand"></i></span>
+                </button>
+              </h3>
+              <div class="globalfooter-column-section-list-wrapper">
+                <ul class="globalfooter-column-section-list">
+                  <li class="globalfooter-column-section-item">
+                    <a href="#">For Business</a>
+                  </li>
+                  <li class="globalfooter-column-section-item">
+                    <a href="joinUs.html">Join Us</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="globalfooter-column-section">
+              <h3 class="globalfooter-column-section-title">
+                <span class="globalfooter-column-section-title-text"
+                  >Resources</span
+                >
+                <button
+                  id="globalfooterColumnSectionButton-Shops3"
+                  class="globalfooter-column-section-title-text-button btn btn-primary text-secondary px-0"
+                >
+                  <span>Resources</span>
+                  <span><i class="bi bi-arrows-angle-expand"></i></span>
+                </button>
+              </h3>
+              <div class="globalfooter-column-section-list-wrapper">
+                <ul class="globalfooter-column-section-list">
+                  <li class="globalfooter-column-section-item">
+                    <a href="offers.html">Offers</a>
+                  </li>
+                  <li class="globalfooter-column-section-item">
+                    <a href="#">Privacy & Terms</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="globalfooter-column col">
+            <div class="globalfooter-column-section">
+              <h3 class="globalfooter-column-section-title">
+                <span class="globalfooter-column-section-title-text"
+                  >Shops</span
+                >
+                <button
+                  id="globalfooterColumnSectionButton-Shops4"
+                  class="globalfooter-column-section-title-text-button btn btn-primary text-secondary px-0"
+                >
+                  <span>Shops</span>
+                  <span><i class="bi bi-arrows-angle-expand"></i></span>
+                </button>
+              </h3>
+              <div class="globalfooter-column-section-list-wrapper">
+                <ul class="globalfooter-column-section-list">
+                  <li class="globalfooter-column-section-item">
+                    <a href="#">BestSeller</a>
+                  </li>
+                  <li class="globalfooter-column-section-item">
+                    <a href="#">New Arrival</a>
+                  </li>
+                  <li class="globalfooter-column-section-item">
+                    <a href="#">Ring</a>
+                  </li>
+                  <li class="globalfooter-column-section-item">
+                    <a href="#">Shell</a>
+                  </li>
+                  <li class="globalfooter-column-section-item">
+                    <a href="#">Cake</a>
+                  </li>
+                  <li class="globalfooter-column-section-item">
+                    <a href="#">Classic</a>
+                  </li>
+                  <li class="globalfooter-column-section-item">
+                    <a href="#">Chocolate</a>
+                  </li>
+                  <li class="globalfooter-column-section-item">
+                    <a href="#">Strawberry</a>
+                  </li>
+                  <li class="globalfooter-column-section-item">
+                    <a href="#">Milk</a>
+                  </li>
+                  <li class="globalfooter-column-section-item">
+                    <a href="#">Glazed</a>
+                  </li>
+                  <li class="globalfooter-column-section-item">
+                    <a href="#">Powdered</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <div
+          class="globalfooter-mini-shop border-secondary border-bottom mb-3 d-flex justify-content-between py-1"
+        >
+          <p class="mt-2">
+            Check out our stores:&nbsp;<span
+              ><a href="#" class="">Find a store</a></span
+            >
+            or call 012-345-6789
+          </p>
+          <div class="social-medias fs-4 lh-0">
+            <a href="#" class="p-3" aria-label="facebook-link" role="link"
+              ><i class="bi bi-facebook"></i
+            ></a>
+            <a href="#" class="p-3" aria-label="instagram-link" role="link"
+              ><i class="bi bi-instagram"></i
+            ></a>
+          </div>
+        </div>
+        <div class="copyright pb-5">
+          Copyright &copy <span id="current-year"></span> XCuisite Inc. All
+          Rights Reserved
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

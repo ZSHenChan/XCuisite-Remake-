@@ -1,14 +1,15 @@
 .stores-main {
-  padding: 10dvh 5rem;
-
   .find-stores {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    background-color: #fff;
-    min-height: 50dvh;
+    padding: 0 5rem 10dvh;
+    &__wrapper {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      background-color: #fff;
+      min-height: 50dvh;
 
-    border-radius: 2rem;
-    overflow: hidden;
+      border-radius: 2rem;
+      overflow: hidden;
+    }
   }
 
   #map {
@@ -37,11 +38,12 @@
   }
 
   @include respond(tab-port) {
-    padding: 10dvh 1dvw;
-
     .find-stores {
-      grid-template-columns: 1fr;
-      grid-template-rows: min-content, 30dvh;
+      padding: 0 1dvw 10dvh;
+      &__wrapper {
+        grid-template-columns: 1fr;
+        grid-template-rows: min-content, 30dvh;
+      }
     }
   }
 }

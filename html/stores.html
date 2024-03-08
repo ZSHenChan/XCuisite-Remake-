@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>XCuisite - About</title>
+    <title>Stores - XCuisite</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -91,26 +91,42 @@
     </header>
 
     <main class="bg-secondary rounded-3 stores-main">
-      <h1 class="h-1 text-center">Stores</h1>
+      <div class="banner">
+        <figure class="banner__img__container">
+          <img
+            srcset="
+              /src/images/about/stores-banner-mobile.jpg   600w,
+              /src/images/about/stores-banner-desktop.jpg 1200w
+            "
+            sizes="(max-width:37.5em) 100dvw, (max-width:75em) 100dvw"
+            alt="About Us Banner"
+            class="img-fluid rounded-top-3 banner__img"
+            src="/src/images/about/stores-banner-desktop.jpg"
+          />
+        </figure>
+      </div>
+      <h1 class="h-1 mt-5 text-center">Stores</h1>
       <p class="find-stores__description text-center h-sub">
         Find a Store Near You
       </p>
       <section class="find-stores">
-        <div class="find">
-          <label for="find__name" class="find__label">Select a Store</label
-          ><select
-            name="find__name"
-            id="find__name"
-            class="find__select mb-md"
-          ></select>
-          <button class="btn btn-primary find__btn mb-lg">Find</button>
-          <div class="find__result">
-            <h2 class="find__result__name mb-sm">
-              Click Find to search for a store location
-            </h2>
+        <div class="find-stores__wrapper">
+          <div class="find">
+            <label for="find__name" class="find__label">Select a Store</label
+            ><select
+              name="find__name"
+              id="find__name"
+              class="find__select mb-md"
+            ></select>
+            <button class="btn btn-primary find__btn mb-lg">Find</button>
+            <div class="find__result">
+              <h2 class="find__result__name mb-sm">
+                Click Find to search for a store location
+              </h2>
+            </div>
           </div>
+          <div id="map"></div>
         </div>
-        <div id="map"></div>
       </section>
     </main>
 

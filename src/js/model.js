@@ -6,6 +6,7 @@ const product0 = {
   thumbnail: '/images/products/strawberry-indulgence_tn.jpg',
   imgAlt: 'Strawberry Indulgence',
   ingredients: 'strawberry',
+  price: '2.99',
 };
 const product1 = {
   productName: 'Hazelnut',
@@ -15,6 +16,7 @@ const product1 = {
   thumbnail: '/images/products/hazelnut_tn.jpg',
   imgAlt: 'Hazelnut Doughnut',
   ingredients: 'sugar',
+  price: '1.99',
 };
 const product2 = {
   productName: 'Kobby&nbsp;Mendez',
@@ -24,6 +26,7 @@ const product2 = {
   thumbnail: 'images/kobby-mendez_tn.jpg',
   imgAlt: 'Kobby Mendez Doughnut',
   ingredients: 'cookie',
+  price: '1.99',
 };
 const product3 = {
   productName: 'Lore&nbsp;Schodts',
@@ -33,6 +36,7 @@ const product3 = {
   thumbnail: 'images/products/caramel_tn.jpg',
   imgAlt: 'Caramel icing doughnut',
   ingredients: 'caramel',
+  price: '1.99',
 };
 const product4 = {
   productName: 'Matcha&nbsp;Deluxe',
@@ -42,6 +46,7 @@ const product4 = {
   thumbnail: 'images/products/matcha_tn.jpg',
   imgAlt: 'Match icing doughnut',
   ingredients: 'matcha',
+  price: '1.99',
 };
 const product5 = {
   productName: 'Dark&nbsp;Forest',
@@ -51,6 +56,7 @@ const product5 = {
   thumbnail: 'images/products/dark-chocolate_tn.jpg',
   imgAlt: 'Dark Forest doughnut',
   ingredients: '98% chocolate',
+  price: '2.49',
 };
 const product6 = {
   productName: 'Towfuqi',
@@ -60,6 +66,7 @@ const product6 = {
   thumbnail: 'images/products/towfiqu_tn.jpg',
   imgAlt: 'doughnut with colourful sprinkles',
   ingredients: 'sugar',
+  price: '1.49',
 };
 const product7 = {
   productName: 'Classic&nbsp;Schodts',
@@ -69,6 +76,7 @@ const product7 = {
   thumbnail: '/images/products/classic-choc_tn.jpg',
   imgAlt: 'classic chocolate doughnut',
   ingredients: 'sugar',
+  price: '1.99',
 };
 const product8 = {
   productName: 'Black Magic',
@@ -78,6 +86,7 @@ const product8 = {
   thumbnail: '/images/products/black-magic_tn.jpg',
   imgAlt: 'dark chocolate doughnut with self-made cream',
   ingredients: 'sugar',
+  price: '2.49',
 };
 const product9 = {
   productName: 'Oreo&nbsp;Bonanza',
@@ -87,6 +96,7 @@ const product9 = {
   thumbnail: '/images/products/oreo_tn.jpg',
   imgAlt: 'oreo doughnut',
   ingredients: 'sugar',
+  price: '2.49',
 };
 const product10 = {
   productName: 'Banana Indulgence',
@@ -96,6 +106,7 @@ const product10 = {
   thumbnail: '/images/products/banana_tn.jpg',
   imgAlt: 'banana doughnut',
   ingredients: 'sugar',
+  price: '2.49',
 };
 const product11 = {
   productName: 'Scary Chocolate',
@@ -105,6 +116,7 @@ const product11 = {
   thumbnail: '/images/products/halloween-choc_tn.jpg',
   imgAlt: 'halloween special doughnut',
   ingredients: 'sugar',
+  price: '2.49',
 };
 const product12 = {
   productName: 'Raspberry',
@@ -114,6 +126,7 @@ const product12 = {
   thumbnail: '/images/products/raspberry_tn.jpg',
   imgAlt: 'raspberry doughnut',
   ingredients: 'sugar',
+  price: '2.49',
 };
 
 const store1 = {
@@ -125,7 +138,7 @@ const store1 = {
   coords: [1.30403, 103.83605],
 };
 const store2 = {
-  storeName: 'Guoco Tower',
+  storeName: 'Guoco Tower - Tanjung Pagar',
   street: '1 Wallich St',
   address: 'Singapore 078881',
   tel: '23458790',
@@ -157,7 +170,7 @@ const store5 = {
   coords: [1.2868035571831067, 103.82717517005327],
 };
 const store6 = {
-  storeName: 'The Shoppes at Marina Bay Sands',
+  storeName: 'The Shoppes - Marina Bay Sands',
   street: '8 Bayfront Ave',
   address: 'Singapore 018955',
   tel: '23451579',
@@ -173,7 +186,7 @@ const store7 = {
   coords: [1.2550589944561685, 103.82169877838415],
 };
 const store8 = {
-  storeName: 'Gain City',
+  storeName: 'Gain City - Ang Mo Kio',
   street: '8 Ang Mo Kio',
   address: 'Singapore 569500',
   tel: '23458890',

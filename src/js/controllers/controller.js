@@ -35,7 +35,7 @@ export default class Controller {
     globalHeader.curtainFlyin();
   };
 
-  _init = function () {
+  init = function () {
     animations.observeAllAnimatedComponents();
     helper.addCopyRightYear();
     cart.renderCartQty(model.state.cart.totalQty);

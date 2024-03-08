@@ -22,6 +22,10 @@
 @mixin transitionAllEaseInOut($duration) {
   transition: all $duration ease-in-out;
 }
+@mixin roundImg {
+  border-radius: 50%;
+  overflow: hidden;
+}
 
 // MEDIA QUERIES
 @mixin respond($breakpoint) {
@@ -77,4 +81,8 @@
       @content;
     }
   }
+}
+
+@include respond(tab-port) {
+  $spacing: 0.7rem;
 }

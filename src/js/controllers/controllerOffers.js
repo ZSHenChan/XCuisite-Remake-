@@ -11,30 +11,30 @@ class ControllerOffers extends Controller {
   constructor() {
     super();
     offers.render(model.products);
-    this._init();
-    this.addHandlers();
+    this.init();
+    this._addHandlers();
   }
 
-  controlModal = function (targetID) {
+  _controlModal = function (targetID) {
     model.state.modalProduct = model.products[targetID];
     offers.modalWindow(model.state.modalProduct);
   };
 
-  controlAddToCart = function () {
+  _controlAddToCart = function () {
     const qty = offers.getQtyFromModal();
     offers.closeModal();
     model.addToCart(+qty);
     cart.renderCartQty(model.state.cart.totalQty);
   };
 
-  controlCloseModal = function () {
+  _controlCloseModal = function () {
     offers.closeModal();
   };
 
-  addHandlers() {
-    offers.addHandlerCards(this.controlModal);
-    offers.addHandlerAddToCart(this.controlAddToCart);
-    offers.addHandlerCloseModal(this.controlCloseModal);
+  _addHandlers() {
+    offers.addHandlerCards(this._controlModal);
+    offers.addHandlerAddToCart(this._controlAddToCart);
+    offers.addHandlerCloseModal(this._controlCloseModal);
   }
 }
 

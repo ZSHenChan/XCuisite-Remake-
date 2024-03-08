@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>XCuisite - check out</title>
+    <title>Check Out - XCuisite</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -51,7 +51,7 @@
             <a href="about.html" class="nav-link">About</a>
           </li>
           <li class="navbar-item">
-            <a href="#" class="nav-link">Offers</a>
+            <a href="offers.html" class="nav-link">Offers</a>
           </li>
           <li class="navbar-item">
             <a href="stores.html" class="nav-link">Stores</a>
@@ -83,13 +83,14 @@
 
     <main class="bg-secondary rounded-3 p-0 checkout-main">
       <section class="section-total">
-        <h1 class="h-1 mb-sm">
-          Your order total is $<span class="section-total__total amount"
-            >94.00</span
-          >
+        <h1 class="h-2 mb-sm section-total__heading">
+          Your order total is
+          <span class="section-total__total grand-total__amount">94.00</span>
         </h1>
-        <div class="section-total-details mb-md">
-          Free delivery for orders over $100
+        <div class="section-total__details mb-md">
+          Free delivery for orders over $<span
+            class="section-total__details__shipping"
+          ></span>
         </div>
         <button class="btn-checkout-payment btn btn-primary mb-lg">
           Check Out
@@ -126,15 +127,15 @@
         <div class="summary mb-lg">
           <p class="m-0 summary__heading">Subtotal</p>
           <div class="total-checkout__amount">
-            $<span class="amount">89.00</span>
+            <span class="total_amount">89.00</span>
           </div>
           <p class="mb-sm summary__heading">Shipping</p>
           <div class="total-checkout__shipping mb-sm">
-            $<span class="shipping-amount">5.00</span>
+            <span class="shipping_amount">5.00</span>
           </div>
           <p class="summary__heading total-checkout__grand m-0">Grand Total</p>
           <div class="grand-total">
-            $<span class="grand-total__amount">94.00</span>
+            <span class="grand-total__amount">94.00</span>
           </div>
         </div>
         <button class="btn-checkout-payment btn btn-primary">Check Out</button>
@@ -161,7 +162,7 @@
               <div class="globalfooter-column-section-list-wrapper">
                 <ul class="globalfooter-column-section-list">
                   <li class="globalfooter-column-section-item">
-                    <a href="#">Singapore</a>
+                    <a href="./stores.html">Singapore</a>
                   </li>
                   <li class="globalfooter-column-section-item">
                     <a href="#">Malaysia</a>

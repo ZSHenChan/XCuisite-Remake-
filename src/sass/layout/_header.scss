@@ -174,6 +174,13 @@
       position: relative;
       margin-top: 3dvw;
 
+      .empty-cart-btn {
+        padding: 0.5rem;
+        // color: $secondary;
+        // background-color: transparent;
+        // border: none;
+      }
+
       .cart-header {
         font-weight: bold;
         letter-spacing: 0.12rem;
