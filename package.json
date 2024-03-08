@@ -5,9 +5,9 @@
   "default": "index.html",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html --dist-dir ./dist"
+    "build": "parcel build index.html"
   },
-  "author": "",
+  "author": "Zi Shen",
   "license": "ISC",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.11.0",
@@ -19,5 +19,9 @@
     "core-js": "^3.35.1",
     "leaflet": "^1.9.4",
     "regenerator": "^0.14.12"
+  },
+  "staticFiles": {
+    "staticPath": "./src/images",
+    "watcherGlob": "**"
   }
 }
