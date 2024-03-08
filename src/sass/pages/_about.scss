@@ -1,16 +1,17 @@
 .section-founder {
-  padding: 10dvh 5rem;
+  $founder-spacing: 18dvh;
+
+  padding: 7dvh 5rem;
   display: grid;
   place-items: center;
   position: relative;
 
   &__wrapper {
-    min-height: 50dvh;
     height: 100%;
     width: 80%;
-    max-width: 40rem;
+    max-width: 35rem;
     display: grid;
-    grid-template-rows: 25dvh max-content;
+    grid-template-rows: $founder-spacing max-content;
     border-radius: 2rem;
     box-shadow: $shadow-light;
     overflow: hidden;
@@ -23,7 +24,7 @@
         position: relative;
       }
       &__bottom {
-        padding: 10dvh 5rem 5rem;
+        padding: $founder-spacing * 0.6 5rem 5rem;
 
         .h-3 {
           font-size: $font-lg;
@@ -39,15 +40,15 @@
       @include absCentralise;
       @include roundImg;
       &--founder {
-        width: 40%;
-        max-width: 18rem;
+        width: $founder-spacing * 1.2;
+        max-width: 30dvw;
         border: solid 0.7rem $secondary;
         top: 90%;
         left: 60%;
       }
       &--cofounder {
-        width: 30%;
-        max-width: 14rem;
+        width: $founder-spacing * 0.9;
+        max-width: 25dvw;
         border: solid 0.5rem $secondary;
         top: 95%;
         left: 38%;
