@@ -1,6 +1,7 @@
 import * as model from '../model.js';
 import Component from './component.js';
 import image from '../../images/products/banana.jpg';
+import icon from 'url:../../images/sprite.svg';
 
 class Carousel extends Component {
   _parentEl = document.querySelector('.card-container');
@@ -43,18 +44,11 @@ class Carousel extends Component {
                   <p class="card-text">${product.description}</p>
                   <div class="cta-links mt-4">
                     <a class="icon-link" href="./html/offers.html">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        fill="currentColor"
-                        class="bi bi-symmetry-horizontal"
-                        viewBox="0 0 16 16"
-                      >
-                        <path
-                          d="M13.5 7a.5.5 0 0 0 .24-.939l-11-6A.5.5 0 0 0 2 .5v6a.5.5 0 0 0 .5.5zm.485 2.376a.5.5 0 0 1-.246.563l-11 6A.5.5 0 0 1 2 15.5v-6a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 .485.376M11.539 10H3v4.658L11.54 10z"
-                        />
-                      </svg>
+                      <svg class="card-icon">
+                    <use
+                      xlink:href="${icon}#icon-chevron-right"
+                    ></use>
+                  </svg>
                       Learn More
                     </a>
                   </div>

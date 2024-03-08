@@ -59,6 +59,12 @@
     font-size: $font-sm;
   }
 
+  &-icon {
+    height: $font-md;
+    width: $font-md;
+    fill: $primary;
+  }
+
   @media only screen and (width<= $bp-phone), only screen and (hover: none) {
     .icon-link {
       display: none;
