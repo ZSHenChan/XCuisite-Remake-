@@ -15,13 +15,21 @@ class Cart extends Component {
     this._cartQty.textContent = `${qty === 0 ? '' : qty}`;
   };
   _generateMarkups() {
-    return this._data
+    const productMarkups = this._data
+      .slice(0, 3)
       .map(data => this._generateMarkup(data.product, data.qty))
       .join('');
+    if (this._data.length > 3) {
+      return (
+        productMarkups +
+        '<li class="item" role="listitem"><div></div><strong>and more...</strong></li>'
+      );
+    }
+    return productMarkups;
   }
 
   _generateMarkup(product, qty) {
-    return `<li class="item">
+    return `<li class="item" role="listitem">
           <div class="item-img-container">
             <img
               src="${imageTn}"

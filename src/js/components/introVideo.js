@@ -71,11 +71,8 @@ class IntroVideo extends Component {
   };
 
   addHandlerLoadVideo = function (handler) {
-    // const isDesktop = screen.width >= 768;
-    // const targetVideo = isDesktop ? this._videoDesktop : this._videoMobile;
-    // targetVideo.style.display = 'block';
     const targetVideo = this._videoDesktop;
-    targetVideo.addEventListener('loadeddata', function () {
+    targetVideo.addEventListener('canplaythrough', function () {
       handler(true);
     });
   };

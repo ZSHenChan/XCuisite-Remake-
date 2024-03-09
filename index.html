@@ -19,7 +19,11 @@
 
     <link href="/src/sass/main.scss" rel="stylesheet" />
 
-    <link rel="icon" href="./src/images/logos/xcuisite-logo-64-bg.png" />
+    <link
+      rel="icon"
+      href="./src/images/logos/xcuisite-logo-64-bg.png"
+      alt="XCuisite logo"
+    />
     <link
       rel="apple-touch-icon"
       href="./src/images/logos/xcuisite-logo-192-bg.png"
@@ -33,7 +37,7 @@
   </head>
   <body>
     <header class="global-header">
-      <nav class="navbar navbar-dark sticky-top">
+      <nav class="navbar navbar-dark sticky-top" role="navigation">
         <a href="#" class="navbar-menuback">
           <img
             src="/src/images/logos/xcuisite-logo-64.png"
@@ -41,34 +45,42 @@
             class="navbar-menuback__logo"
           />
         </a>
-        <ul class="navbar-nav navbar-nav--right" role="list">
-          <li id="cart-icon">
+        <div class="navbar-nav navbar-nav--right">
+          <div id="cart-icon">
             <svg class="icon icon-gift">
               <use xlink:href="./src/images/sprite.svg#icon-gift"></use>
             </svg>
             <span id="cart-qty">&nbsp;</span>
-          </li>
+          </div>
           <div for="navbar-nav-checkbox" class="navbar-nav-btn">
             <div class="navbar-nav-icon"></div>
           </div>
           <div class="navbar-nav-background">&nbsp;</div>
-        </ul>
+        </div>
 
-        <ul class="navbar-nav navbar-nav--left" role="list">
-          <li class="navbar-item" role="listitem">
-            <a href="./html/about.html" class="nav-link">About</a>
+        <ul class="navbar-nav navbar-nav--left" >
+          <li class="navbar-item">
+            <a href="./html/about.html" class="nav-link" tabindex="0" aria-label="go to About us page">About</a>
           </li>
-          <li class="navbar-item" role="listitem">
-            <a href="./html/offers.html" class="nav-link">Offers</a>
+          <li class="navbar-item">
+            <a href="./html/offers.html" class="nav-link" tabindex="0" aria-label="go to Offers page"
+              >Offers</a
+            >
           </li>
-          <li class="navbar-item" role="listitem">
-            <a href="./html/stores.html" class="nav-link">Stores</a>
+          <li class="navbar-item">
+            <a href="./html/stores.html" class="nav-link" tabindex="0" aria-label="go to Stores page"
+              >Stores</a
+            >
           </li>
-          <li class="navbar-item" role="listitem">
-            <a href="./html/contactUs.html" class="nav-link">Contact&nbsp;Us</a>
+          <li class="navbar-item">
+            <a href="./html/contactUs.html" class="nav-link" tabindex="0" aria-label="go to Contact us page"
+              >Contact&nbsp;Us</a
+            >
           </li>
-          <li class="navbar-item" role="listitem">
-            <a href="./html/joinUs.html" class="nav-link">Join&nbsp;Us</a>
+          <li class="navbar-item">
+            <a href="./html/joinUs.html" class="nav-link" tabindex="0" aria-label="go to Join us page"
+              >Join&nbsp;Us</a
+            >
           </li>
         </ul>
       </nav>
@@ -86,32 +98,17 @@
             </button></span
           >
           <span></span>
-          <div class="in-cart-wrapper">
-            <li class="item row" role="listitem">
-              <span class="item-img col-1">
-                <img
-                  src="./src/images/products/banana_tn.jpg"
-                  alt="${product.productName}"
-                  class="rounded top-5"
-                  width="64"
-                  height="64"
-                />
-              </span>
-              <span class="item-name col-6"
-                >${product.productName}<br /><span class="item-qty">
-                  x${qty}</span
-                ></span
-              >
-            </li>
-          </div>
+          <ul class="in-cart-wrapper" role="list">
+            
+          </u>
         </div>
       </div>
       <div class="global-curtain-bottom" id="global-curtain-bottom"></div>
     </header>
-    <main class="rounded-3 text-center p-0" id="main-body">
+    <main role="main" class="rounded-3 text-center p-0" id="main-body">
       <section class="intro section-hero">
         <div class="hero-caption-container">
-          <h1 class="hero-caption" role="banner">Strawberry Flamingo</h1>
+          <h1 class="hero-caption" role="heading">Strawberry Flamingo</h1>
         </div>
 
         <div class="video">
@@ -154,6 +151,7 @@
         <a
           href="html/offers.html"
           class="btn intro-cta-btn expand-btn delay-animation"
+          aria-label="go to Offers page"
           >Get Now
         </a>
 
@@ -400,7 +398,7 @@
             <div class="globalfooter-column-section-list-wrapper">
               <ul class="globalfooter-column-section-list" role="list">
                 <li class="globalfooter-column-section-item" role="listitem">
-                  <a href="./html/stores.html">Singapore</a>
+                  <a href="./html/stores.html" aria-label="go to Stores page">Singapore</a>
                 </li>
                 <li class="globalfooter-column-section-item" role="listitem">
                   <a href="#">Malaysia</a>
@@ -434,16 +432,16 @@
             <div class="globalfooter-column-section-list-wrapper">
               <ul class="globalfooter-column-section-list" role="list">
                 <li class="globalfooter-column-section-item" role="listitem">
-                  <a href="html/investors.html">Investors</a>
+                  <a href="html/investors.html" aria-label="go to Investors page">Investors</a>
                 </li>
                 <li class="globalfooter-column-section-item" role="listitem">
-                  <a href="index.html">Events</a>
+                  <a href="index.html" aria-label="go to Events page">Events</a>
                 </li>
                 <li class="globalfooter-column-section-item" role="listitem">
-                  <a href="html/about.html">History</a>
+                  <a href="html/about.html" aria-label="go to about us page">History</a>
                 </li>
                 <li class="globalfooter-column-section-item" role="listitem">
-                  <a href="html/contactUs.html">Contact Us</a>
+                  <a href="html/contactUs.html" aria-label="go to contact us page">Contact Us</a>
                 </li>
               </ul>
             </div>

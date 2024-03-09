@@ -28,7 +28,7 @@
 
   <body class="bg-primary">
     <header class="global-header">
-      <nav class="navbar navbar-dark sticky-top">
+      <nav class="navbar navbar-dark sticky-top" role="navigation">
         <a href="../index.html" class="navbar-menuback">
           <img
             src="../src/images/logos/xcuisite-logo-64.png"
@@ -36,43 +36,51 @@
             class="navbar-menuback__logo"
           />
         </a>
-        <ul class="navbar-nav navbar-nav--right">
-          <li id="cart-icon">
+        <div class="navbar-nav navbar-nav--right">
+          <div id="cart-icon">
             <svg class="icon icon-gift">
               <use xlink:href="../src/images/sprite.svg#icon-gift"></use>
             </svg>
             <span id="cart-qty">&nbsp;</span>
-          </li>
+          </div>
           <div for="navbar-nav-checkbox" class="navbar-nav-btn">
             <div class="navbar-nav-icon"></div>
           </div>
           <div class="navbar-nav-background">&nbsp;</div>
-        </ul>
+        </div>
 
-        <ul class="navbar-nav navbar-nav--left">
+        <ul class="navbar-nav navbar-nav--left" >
           <li class="navbar-item">
-            <a href="#" class="nav-link">About</a>
+            <a href="about.html" class="nav-link" tabindex="0" aria-label="go to About us page">About</a>
           </li>
           <li class="navbar-item">
-            <a href="offers.html" class="nav-link">Offers</a>
+            <a href="offers.html" class="nav-link" tabindex="0" aria-label="go to Offers page"
+              >Offers</a
+            >
           </li>
           <li class="navbar-item">
-            <a href="stores.html" class="nav-link">Stores</a>
+            <a href="stores.html" class="nav-link" tabindex="0" aria-label="go to Stores page"
+              >Stores</a
+            >
           </li>
           <li class="navbar-item">
-            <a href="contactUs.html" class="nav-link">Contact&nbsp;Us</a>
+            <a href="contactUs.html" class="nav-link" tabindex="0" aria-label="go to Contact us page"
+              >Contact&nbsp;Us</a
+            >
           </li>
           <li class="navbar-item">
-            <a href="joinUs.html" class="nav-link">Join&nbsp;Us</a>
+            <a href="joinUs.html" class="nav-link" tabindex="0" aria-label="go to Join us page"
+              >Join&nbsp;Us</a
+            >
           </li>
         </ul>
       </nav>
       <div class="global-curtain" id="cart-curtain">
         <div class="global-curtain-content">
-          <a class="check-out-btn btn btn-primary" href="./checkOut.html"
+          <a class="check-out-btn btn btn-primary" href="checkOut.html"
             >Check Out <span class="check-out-arrow">&rarr;</span></a
           >
-          <span class="d-flex justify-content-between align-items-center"
+          <span class="d-flex justify-content-between align-items-center mb-md"
             ><h3 class="cart-header">Your Items</h3>
             <button
               class="btn btn-secondary text-primary fw-bolder empty-cart-btn"
@@ -81,7 +89,9 @@
             </button></span
           >
           <span></span>
-          <div class="in-cart-wrapper"></div>
+          <ul class="in-cart-wrapper" role="list">
+            
+          </u>
         </div>
       </div>
       <div class="global-curtain-bottom" id="global-curtain-bottom"></div>
