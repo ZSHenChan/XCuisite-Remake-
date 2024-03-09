@@ -26,7 +26,11 @@ class ViewCheckOut extends Component {
   _calcTotalAmount() {
     this._totalAmount = parseFloat(
       this._data
-        .reduce((acc, product) => acc + parseFloat(product.product.price), 0)
+        .reduce(
+          (acc, product) =>
+            acc + product.qty * parseFloat(product.product.price),
+          0
+        )
         .toFixed(PRICE_DP)
     );
 

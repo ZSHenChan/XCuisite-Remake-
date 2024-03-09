@@ -19,7 +19,7 @@ const product1 = {
   price: '1.99',
 };
 const product2 = {
-  productName: 'Kobby&nbsp;Mendez',
+  productName: 'Kobby Mendez',
   id: 2,
   description: 'For&nbsp;Him',
   img: 'products/kobby-mendez.jpg',
@@ -29,7 +29,7 @@ const product2 = {
   price: '1.99',
 };
 const product3 = {
-  productName: 'Lore&nbsp;Schodts',
+  productName: 'Lore Schodts',
   id: 3,
   description: 'Assorted&nbsp;Caramel',
   img: 'images/products/caramel.jpg',
@@ -39,7 +39,7 @@ const product3 = {
   price: '1.99',
 };
 const product4 = {
-  productName: 'Matcha&nbsp;Deluxe',
+  productName: 'Matcha Deluxe',
   id: 4,
   description: 'Matcha&nbsp;Icing',
   img: 'images/products/matcha.jpg',
@@ -49,7 +49,7 @@ const product4 = {
   price: '1.99',
 };
 const product5 = {
-  productName: 'Dark&nbsp;Forest',
+  productName: 'Dark Forest',
   id: 5,
   description: 'Dark&nbsp;Chocolate',
   img: 'images/products/dark-chocolate.jpg',
@@ -69,9 +69,9 @@ const product6 = {
   price: '1.49',
 };
 const product7 = {
-  productName: 'Classic&nbsp;Schodts',
+  productName: 'Classic Schodts',
   id: 7,
-  description: 'Classic&nbsp;.Not Basic',
+  description: 'Classic. Not Basic',
   img: 'images/products/classic-choc.jpg',
   thumbnail: '/images/products/classic-choc_tn.jpg',
   imgAlt: 'classic chocolate doughnut',
@@ -89,7 +89,7 @@ const product8 = {
   price: '2.49',
 };
 const product9 = {
-  productName: 'Oreo&nbsp;Bonanza',
+  productName: 'Oreo Bonanza',
   id: 9,
   description: 'Kids&nbsp;Favourite',
   img: '/images/products/oreo.jpg',

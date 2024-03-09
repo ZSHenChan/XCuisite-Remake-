@@ -47,6 +47,9 @@
 
     .card {
       border: none;
+      &-title {
+        width: 100%;
+      }
       &-wrapper {
         max-width: 23rem;
       }

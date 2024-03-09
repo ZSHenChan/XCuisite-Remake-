@@ -8,7 +8,7 @@ class IntroVideo extends Component {
   _videoPlaceholder = document.getElementById('video-placeholder');
   _introCaption = document.querySelector('.hero-caption');
   _videoDesktop = document.getElementById('video-desktop');
-  _videoMobile = document.getElementById('video-mobile');
+  // _videoMobile = document.getElementById('video-mobile');
 
   _expandCtaBtn = function (entries) {
     const [entry] = entries;
@@ -36,17 +36,33 @@ class IntroVideo extends Component {
     threshold: 0.3,
   });
 
-  addHandlerVideoScrolling = function (offSetHeight) {
+  _lastKnownScrollPosition = 0;
+  _ticking = false;
+
+  addHandlerVideoScrolling = () => {
     window.addEventListener(
       'scroll',
-      function () {
-        const elementHeight = this._parentEl.offsetHeight;
-        let scrollTop = window.scrollY;
-        let offset = Math.min(elementHeight, scrollTop);
-        let opacity = 1 - offset / 300;
-        this._parentEl.style.opacity = opacity;
-      }.bind(this)
+      e => {
+        this._lastKnownScrollPosition = window.scrollY;
+
+        if (!this._ticking) {
+          window.requestAnimationFrame(() => {
+            this._updateOpacity(this._lastKnownScrollPosition);
+            this._ticking = false;
+          });
+
+          this._ticking = true;
+        }
+      },
+      { passive: true }
     );
+  };
+
+  _updateOpacity = function (scrollPos) {
+    const elementHeight = this._parentEl.offsetHeight;
+    let offset = Math.min(elementHeight, scrollPos);
+    let opacity = 1 - offset / 300;
+    this._parentEl.style.opacity = opacity;
   };
 
   addHandlerIntoCtaBtn = function () {
@@ -55,11 +71,12 @@ class IntroVideo extends Component {
   };
 
   addHandlerLoadVideo = function (handler) {
-    const isDesktop = screen.width >= 768;
-    const targetVideo = isDesktop ? this._videoDesktop : this._videoMobile;
-    targetVideo.style.display = 'block';
+    // const isDesktop = screen.width >= 768;
+    // const targetVideo = isDesktop ? this._videoDesktop : this._videoMobile;
+    // targetVideo.style.display = 'block';
+    const targetVideo = this._videoDesktop;
     targetVideo.addEventListener('loadeddata', function () {
-      handler(isDesktop);
+      handler(true);
     });
   };
 
